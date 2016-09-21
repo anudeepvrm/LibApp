@@ -1,10 +1,17 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:show, :edit, :update, :destroy]
+  before_action :check_session_id, only: [:update, :home]
+  before_action :set_user, only: [:show, :edit, :update, :destroy, :home]
+
 
   # GET /users
   # GET /users.json
   def index
     @users = User.all
+  end
+
+  def logout
+    reset_session
+    redirect_to root_path
   end
 
   def login
@@ -21,6 +28,9 @@ class UsersController < ApplicationController
     @user = User.new
   end
 
+  def home
+  end
+
   # GET /users/1/edit
   def edit
   end
@@ -29,12 +39,26 @@ class UsersController < ApplicationController
   def validatelogin
     @user=User.new(user_params)
 
-    if @user.exist?
-      User.select(@user.email)
-    else
 
-    end
 
+      respond_to do |format|
+        record=(User.find_by email: @user.email)
+        status=false
+      if (record != nil)
+        if record.password == @user.password
+          status=true
+        end
+      end
+        if status
+          session[:current_user_id] = record.id
+          format.html { redirect_to user_home_path, notice: 'Login Success' }
+          format.json { render :show, status: :ok, location: @user }
+        else
+          format.html { redirect_to user_login_path, notice: 'user name and password do not match' }
+          format.json { render :show, status: :ok, location: @user }
+        end
+
+      end
   end
 
   # POST /users
@@ -80,9 +104,14 @@ class UsersController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_user
-      @user = User.find(params[:id])
+      @user = User.find(session[:current_user_id])
     end
 
+    def check_session_id
+      if session[:current_user_id] == nil
+        redirect_to root_path
+      end
+    end
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
       params.require(:user).permit(:name, :email, :password)

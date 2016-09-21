@@ -1,2 +1,2 @@
-Admin.create!(username: "admin", password: "admin")
+Admin.create!(email: "admin", password: "admin")
 
