@@ -7,6 +7,10 @@ class UsersController < ApplicationController
     @users = User.all
   end
 
+  def login
+    @user=User.new
+  end
+
   # GET /users/1
   # GET /users/1.json
   def show
@@ -19,6 +23,18 @@ class UsersController < ApplicationController
 
   # GET /users/1/edit
   def edit
+  end
+
+  #POST /user_login
+  def validatelogin
+    @user=User.new(user_params)
+
+    if @user.exist?
+      User.select(@user.email)
+    else
+
+    end
+
   end
 
   # POST /users
