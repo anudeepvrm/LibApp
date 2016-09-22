@@ -300,3 +300,358 @@ puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
   Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
   Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
   Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (2181.3ms)
+Started GET "/admin/login" for 127.0.0.1 at 2016-09-22 18:30:30 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/bundler/gems/active_admin-f8926831429f/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/bundler/gems/active_admin-f8926831429f/app/views/active_admin/devise/shared/_links.erb (8.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/bundler/gems/active_admin-f8926831429f/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (195.0ms)
+Completed 200 OK in 21007ms (Views: 20950.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-09-22 18:33:00 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Parameters: {"internal"=>true}
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/railties-5.0.0.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/railties-5.0.0.1/lib/rails/templates/rails/welcome/index.html.erb (5.0ms)
+Completed 200 OK in 189ms (Views: 61.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/" for 127.0.0.1 at 2016-09-22 18:33:27 -0400
+Processing by Admin::DashboardController#index as HTML
+Completed 401 Unauthorized in 14ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/login" for 127.0.0.1 at 2016-09-22 18:33:27 -0400
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/bundler/gems/active_admin-f8926831429f/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/bundler/gems/active_admin-f8926831429f/app/views/active_admin/devise/shared/_links.erb (1.5ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/bundler/gems/active_admin-f8926831429f/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (118.1ms)
+Completed 200 OK in 758ms (Views: 736.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2016-09-22 18:34:25 -0400
+Processing by Admin::DashboardController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/login" for 127.0.0.1 at 2016-09-22 18:34:25 -0400
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/bundler/gems/active_admin-f8926831429f/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/bundler/gems/active_admin-f8926831429f/app/views/active_admin/devise/shared/_links.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/bundler/gems/active_admin-f8926831429f/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (118.0ms)
+Completed 200 OK in 693ms (Views: 691.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/login" for 127.0.0.1 at 2016-09-22 18:34:47 -0400
+Processing by ActiveAdmin::Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"flAMdzwNHUjHWlc+iAB+nG5AeUmj0P0W4HVq7111TOoyEJxLsDIDlMSH1KkV/coXGKDMjMiU9HRyzGlWq45ZHQ==", "admin_user"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  [1m[36mAdminUser Load (0.0ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."email" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["email", "admin@example.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 31ms (ActiveRecord: 0.0ms)
+
+
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"flAMdzwNHUjHWlc+iAB+nG5AeUmj0P0W4HVq7111TOoyEJxLsDIDlMSH1KkV/coXGKDMjMiU9HRyzGlWq45ZHQ==", "admin_user"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/bundler/gems/active_admin-f8926831429f/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/bundler/gems/active_admin-f8926831429f/app/views/active_admin/devise/shared/_links.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/bundler/gems/active_admin-f8926831429f/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (129.0ms)
+Completed 200 OK in 1258ms (Views: 711.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/login" for 127.0.0.1 at 2016-09-22 18:34:55 -0400
+Processing by ActiveAdmin::Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GfCQTdfpRYEqYwATbXcDLtk75qX4vARFA+a4COUhXoNVsABxW9ZbXSm+g4Twirelr9tTYJP4DSeRX7uxE9pLdA==", "admin_user"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  [1m[36mAdminUser Load (0.0ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."email" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["email", "admin@example.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.0ms)
+
+
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GfCQTdfpRYEqYwATbXcDLtk75qX4vARFA+a4COUhXoNVsABxW9ZbXSm+g4Twirelr9tTYJP4DSeRX7uxE9pLdA==", "admin_user"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/bundler/gems/active_admin-f8926831429f/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/bundler/gems/active_admin-f8926831429f/app/views/active_admin/devise/shared/_links.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/bundler/gems/active_admin-f8926831429f/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (115.0ms)
+Completed 200 OK in 893ms (Views: 666.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/login" for 127.0.0.1 at 2016-09-22 18:35:52 -0400
+Processing by ActiveAdmin::Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hs3gZk34DEIR8f9meUVubosNUQUJiu08pqb9i1rqhjDKjXBawccSnhIsfPHkuNrl/e3kwGLO5F40H/4yrBGTxw==", "admin_user"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  [1m[36mAdminUser Load (0.0ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."email" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["email", "admin@example.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.0ms)
+
+
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hs3gZk34DEIR8f9meUVubosNUQUJiu08pqb9i1rqhjDKjXBawccSnhIsfPHkuNrl/e3kwGLO5F40H/4yrBGTxw==", "admin_user"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/bundler/gems/active_admin-f8926831429f/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/bundler/gems/active_admin-f8926831429f/app/views/active_admin/devise/shared/_links.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/bundler/gems/active_admin-f8926831429f/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (116.0ms)
+Completed 200 OK in 925ms (Views: 700.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/password/new" for 127.0.0.1 at 2016-09-22 18:35:56 -0400
+Processing by ActiveAdmin::Devise::PasswordsController#new as HTML
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/bundler/gems/active_admin-f8926831429f/app/views/active_admin/devise/passwords/new.html.erb within layouts/active_admin_logged_out
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/bundler/gems/active_admin-f8926831429f/app/views/active_admin/devise/shared/_links.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/bundler/gems/active_admin-f8926831429f/app/views/active_admin/devise/passwords/new.html.erb within layouts/active_admin_logged_out (107.0ms)
+Completed 200 OK in 913ms (Views: 708.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/password" for 127.0.0.1 at 2016-09-22 18:36:14 -0400
+Processing by ActiveAdmin::Devise::PasswordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KYa1Fj+VLJrpwCawDH7RQHw4ORJvJK85Edw3H2wZdyxlxiUqs6oyRuodpSeRg2XLCtiM1wRgpluDZTSmmuJi2w==", "admin_user"=>{"email"=>"jitinnagpal1989@gmail.com"}, "commit"=>"Reset My Password"}
+  [1m[36mAdminUser Load (0.0ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."email" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["email", "jitinnagpal1989@gmail.com"], ["LIMIT", 1]]
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/bundler/gems/active_admin-f8926831429f/app/views/active_admin/devise/passwords/new.html.erb within layouts/active_admin_logged_out
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/bundler/gems/active_admin-f8926831429f/app/views/active_admin/devise/shared/_links.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/bundler/gems/active_admin-f8926831429f/app/views/active_admin/devise/passwords/new.html.erb within layouts/active_admin_logged_out (107.0ms)
+Completed 200 OK in 1390ms (Views: 645.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/password" for 127.0.0.1 at 2016-09-22 18:36:18 -0400
+Processing by ActiveAdmin::Devise::PasswordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"03cvb5+tnHxoXG97mvPYkfgk9hnt3dIKxrBAjy/dxWSfN79TE5KCoGuB7OwHDmwajsRD3IaZ22hUCUM22SbQkw==", "admin_user"=>{"email"=>"jitinnagpal1989@gmail.com"}, "commit"=>"Reset My Password"}
+  [1m[36mAdminUser Load (0.0ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."email" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["email", "jitinnagpal1989@gmail.com"], ["LIMIT", 1]]
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/bundler/gems/active_admin-f8926831429f/app/views/active_admin/devise/passwords/new.html.erb within layouts/active_admin_logged_out
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/bundler/gems/active_admin-f8926831429f/app/views/active_admin/devise/shared/_links.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/bundler/gems/active_admin-f8926831429f/app/views/active_admin/devise/passwords/new.html.erb within layouts/active_admin_logged_out (95.0ms)
+Completed 200 OK in 1285ms (Views: 653.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/login" for 127.0.0.1 at 2016-09-22 18:37:22 -0400
+Processing by ActiveAdmin::Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3xjjIXRRQhCjTWTHtB5mfyuf+THHISG6+fAiM8CrENmTWHMd+G5czKCQ51Ap49L0XX9M9KxlKNhrSSGKNlAFLg==", "admin_user"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  [1m[36mAdminUser Load (0.0ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."email" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["email", "admin@example.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.0ms)
+
+
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3xjjIXRRQhCjTWTHtB5mfyuf+THHISG6+fAiM8CrENmTWHMd+G5czKCQ51Ap49L0XX9M9KxlKNhrSSGKNlAFLg==", "admin_user"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/bundler/gems/active_admin-f8926831429f/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/bundler/gems/active_admin-f8926831429f/app/views/active_admin/devise/shared/_links.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/bundler/gems/active_admin-f8926831429f/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (118.0ms)
+Completed 200 OK in 901ms (Views: 677.3ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (1.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_active_admin_comments_on_resource_type_and_resource_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_active_admin_comments_on_resource_type_and_resource_id' AND type='index'
+[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_active_admin_comments_on_author_type_and_author_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_active_admin_comments_on_author_type_and_author_id' AND type='index'
+[0m
+  [1m[35m (1.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_active_admin_comments_on_namespace' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_active_admin_comments_on_namespace' AND type='index'
+[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_admin_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_admin_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_admin_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_admin_users_on_email' AND type='index'
+[0m
+Started GET "/admin/login" for 127.0.0.1 at 2016-09-22 18:39:46 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/bundler/gems/active_admin-f8926831429f/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/bundler/gems/active_admin-f8926831429f/app/views/active_admin/devise/shared/_links.erb (8.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/bundler/gems/active_admin-f8926831429f/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (187.0ms)
+Completed 200 OK in 1704ms (Views: 1639.5ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/admin/login" for 127.0.0.1 at 2016-09-22 18:40:20 -0400
+Processing by ActiveAdmin::Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aqfVR0tl8TcXuuHuI56a2ClvuxETIXla7SVCZLFGuVwm50V7x1rv6xRnYnm+Yy5TX48O1HhlcDh/nEHdR72sqw==", "admin_user"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  [1m[36mAdminUser Load (1.0ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."email" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["email", "admin@example.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 15ms (ActiveRecord: 1.0ms)
+
+
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aqfVR0tl8TcXuuHuI56a2ClvuxETIXla7SVCZLFGuVwm50V7x1rv6xRnYnm+Yy5TX48O1HhlcDh/nEHdR72sqw==", "admin_user"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/bundler/gems/active_admin-f8926831429f/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/bundler/gems/active_admin-f8926831429f/app/views/active_admin/devise/shared/_links.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/bundler/gems/active_admin-f8926831429f/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (138.0ms)
+Completed 200 OK in 956ms (Views: 697.3ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAdminUser Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "admin_users" WHERE "admin_users"."email" = ? LIMIT ?[0m  [["email", "admin@example.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "admin_users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "admin@example.com"], ["encrypted_password", "$2a$11$O9e7m8OdPs3wdOfoIFDEDeyPN3j4D8cgOkUCKeV6cpYQnF.gxRocm"], ["created_at", 2016-09-22 22:41:36 UTC], ["updated_at", 2016-09-22 22:41:36 UTC]]
+  [1m[35m (125.0ms)[0m  [1m[36mcommit transaction[0m
+Started POST "/admin/login" for 127.0.0.1 at 2016-09-22 18:42:27 -0400
+Processing by ActiveAdmin::Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qEJaPrWrxZ+idx9+ydgAgQ92/k74Yiwug6FBd2pVoQ/kAsoCOZTbQ6GqnOlUJbQKeZZLi5MmJUwRGELOnK60+A==", "admin_user"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  [1m[36mAdminUser Load (1.0ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."email" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["email", "admin@example.com"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[33mUPDATE "admin_users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "admin_users"."id" = ?[0m  [["current_sign_in_at", 2016-09-22 22:42:27 UTC], ["last_sign_in_at", 2016-09-22 22:42:27 UTC], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", 2016-09-22 22:42:27 UTC], ["id", 1]]
+  [1m[35m (119.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/admin
+Completed 302 Found in 1031ms (ActiveRecord: 122.0ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2016-09-22 18:42:28 -0400
+Processing by Admin::DashboardController#index as HTML
+  [1m[36mAdminUser Load (0.0ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/bundler/gems/active_admin-f8926831429f/app/views/active_admin/page/index.html.arb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/bundler/gems/active_admin-f8926831429f/app/views/active_admin/page/index.html.arb (416.0ms)
+Completed 200 OK in 542ms (Views: 495.0ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateRooms (20160922224326)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE TABLE "rooms" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160922224326"]]
+  [1m[35m (125.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_active_admin_comments_on_resource_type_and_resource_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_active_admin_comments_on_resource_type_and_resource_id' AND type='index'
+[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_active_admin_comments_on_author_type_and_author_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_active_admin_comments_on_author_type_and_author_id' AND type='index'
+[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_active_admin_comments_on_namespace' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_active_admin_comments_on_namespace' AND type='index'
+[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_admin_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_admin_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_admin_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_admin_users_on_email' AND type='index'
+[0m
+Started GET "/admin/dashboard" for 127.0.0.1 at 2016-09-22 18:44:14 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Admin::DashboardController#index as HTML
+  [1m[36mAdminUser Load (1.0ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/bundler/gems/active_admin-f8926831429f/app/views/active_admin/page/index.html.arb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/bundler/gems/active_admin-f8926831429f/app/views/active_admin/page/index.html.arb (825.1ms)
+Completed 200 OK in 940ms (Views: 898.6ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/admin/dashboard" for 127.0.0.1 at 2016-09-22 18:44:19 -0400
+Processing by Admin::DashboardController#index as HTML
+  [1m[36mAdminUser Load (1.0ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/bundler/gems/active_admin-f8926831429f/app/views/active_admin/page/index.html.arb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/bundler/gems/active_admin-f8926831429f/app/views/active_admin/page/index.html.arb (384.0ms)
+Completed 200 OK in 461ms (Views: 458.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/admin/dashboard" for 127.0.0.1 at 2016-09-22 18:44:24 -0400
+Processing by Admin::DashboardController#index as HTML
+  [1m[36mAdminUser Load (0.0ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/bundler/gems/active_admin-f8926831429f/app/views/active_admin/page/index.html.arb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/bundler/gems/active_admin-f8926831429f/app/views/active_admin/page/index.html.arb (413.0ms)
+Completed 200 OK in 487ms (Views: 484.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/" for ::1 at 2016-09-22 18:45:07 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Admin::DashboardController#index as HTML
+  [1m[36mAdminUser Load (0.0ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/bundler/gems/active_admin-f8926831429f/app/views/active_admin/page/index.html.arb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/bundler/gems/active_admin-f8926831429f/app/views/active_admin/page/index.html.arb (2166.1ms)
+Completed 200 OK in 2328ms (Views: 2260.5ms | ActiveRecord: 1.0ms)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateRooms (20160922224326)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE "rooms"[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20160922224326"]]
+  [1m[35m (140.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (15.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_active_admin_comments_on_resource_type_and_resource_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_active_admin_comments_on_resource_type_and_resource_id' AND type='index'
+[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_active_admin_comments_on_author_type_and_author_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_active_admin_comments_on_author_type_and_author_id' AND type='index'
+[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_active_admin_comments_on_namespace' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_active_admin_comments_on_namespace' AND type='index'
+[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_admin_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_admin_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_admin_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_admin_users_on_email' AND type='index'
+[0m
