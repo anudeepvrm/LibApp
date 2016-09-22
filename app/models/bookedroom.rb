@@ -1,4 +1,5 @@
 class Bookedroom < ApplicationRecord
   has_one :user
-  attr_accessor :booking_time
+  has_one :room
+  attr_accessor :status
 end

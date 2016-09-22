@@ -29,9 +29,9 @@ class RoomsController < ApplicationController
       conditions = []
       conditions << "roomno = #{@room.roomno}" if @room.roomno !=nil
       conditions << "building = '#{@room.building}'"
-      conditions << "status = '#{@room.status}'"
       conditions << "size = '#{@room.size}'"
-      @rooms = Room.where(conditions.join(" AND "))
+      temp_rooms = Room.where(conditions.join(" AND "))
+
 
     end
     end

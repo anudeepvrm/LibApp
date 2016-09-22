@@ -13,20 +13,20 @@
 ActiveRecord::Schema.define(version: 20160922012255) do
 
   create_table "admins", force: :cascade do |t|
-    t.string   "username"
+    t.string   "email"
     t.string   "password"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "bookedrooms", force: :cascade do |t|
-    t.integer  "roomno"
-    t.string   "building"
-    t.integer  "size"
     t.string   "status"
     t.integer  "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer  "room_id"
+    t.datetime "booking_time"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.index ["room_id"], name: "index_bookedrooms_on_room_id"
     t.index ["user_id"], name: "index_bookedrooms_on_user_id"
   end
 
@@ -34,8 +34,6 @@ ActiveRecord::Schema.define(version: 20160922012255) do
     t.integer  "roomno"
     t.string   "building"
     t.integer  "size"
-    t.string   "status"
-    t.datetime "date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
