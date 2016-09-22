@@ -1,3 +1,16 @@
-<h1>Welcome </h1><%= @user.name%>
-<%=render 'logout'%>
-<%=link_to 'Edit User Details', user_edit_path%>
+<h1>Welcome </h1>
+<div>
+  <%= @user.name%>
+</div>
+
+<div>
+  <%=render 'logout'%>
+</div>
+
+<div>
+  <%=link_to 'Edit User Details', user_edit_path%>
+</div>
+
+<div>
+  <%=link_to 'search rooms', search_rooms_path%>
+</div>

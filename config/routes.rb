@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :bookedrooms
+  resources :rooms
   root to: 'main#index'
   resources :users
   resources :admins
@@ -9,5 +11,6 @@ Rails.application.routes.draw do
   match '/userhome' => 'users#home', :as => :user_home, via: :get
   match '/useredit' => 'users#edit', :as => :user_edit, via: :get
   match '/userlogout' => 'users#logout', :as => :user_logout, via: :get
+  match '/searchrooms' => 'rooms#search_rooms', :as => :search_rooms, via: :get
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
