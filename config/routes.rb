@@ -12,5 +12,7 @@ Rails.application.routes.draw do
   match '/useredit' => 'users#edit', :as => :user_edit, via: :get
   match '/userlogout' => 'users#logout', :as => :user_logout, via: :get
   match '/searchrooms' => 'rooms#search_rooms', :as => :search_rooms, via: :get
+  match '/search_result' => 'rooms#get_search_rooms', :as => :search_result, via: :post
+  match '/getroomlist' => 'rooms#get_room_list', :as => :get_room_list, via: :get
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

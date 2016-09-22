@@ -3,13 +3,40 @@ class RoomsController < ApplicationController
 
 
   def search_rooms
-
+    @room=Room.new
   end
+
   # GET /rooms
   # GET /rooms.json
   def index
     @rooms = Room.all
   end
+
+  def get_room_list
+  end
+
+  def get_search_rooms
+    @room=Room.new(room_params)
+    date=Time.new(@room.date[1].to_i, @room.date[2].to_i,
+                             @room.date[3].to_i, @room.date[4].to_i,
+                             @room.date[5].to_i)
+    @room.date=date
+    if date.past?
+      redirect_to search_rooms_path, notice: 'Please Enter current or future Date.'
+
+    else
+        if date
+      conditions = []
+      conditions << "roomno = #{@room.roomno}" if @room.roomno !=nil
+      conditions << "building = '#{@room.building}'"
+      conditions << "status = '#{@room.status}'"
+      conditions << "size = '#{@room.size}'"
+      @rooms = Room.where(conditions.join(" AND "))
+
+    end
+    end
+    end
+
 
   # GET /rooms/1
   # GET /rooms/1.json
@@ -73,6 +100,6 @@ class RoomsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def room_params
-      params.require(:room).permit(:roomno, :building, :size, :status)
+      params.require(:room).permit(:roomno, :building, :size, :status,:date)
     end
 end
