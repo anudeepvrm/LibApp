@@ -31,8 +31,9 @@ class RoomsController < ApplicationController
       conditions << "building = '#{@room.building}'"
       conditions << "size = '#{@room.size}'"
       temp_rooms = Room.where(conditions.join(" AND "))
-
-
+      temp_rooms.each do |room|
+        Bookedroom.where("room_id=? and cbooking_time = ? or booking_time = ")
+end
     end
     end
     end

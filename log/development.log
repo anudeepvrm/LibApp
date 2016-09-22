@@ -15503,3 +15503,884 @@ Migrating to CreateBookedrooms (20160922012255)
   [1m[36mBookedroom Load (0.2ms)[0m  [1m[34mSELECT  "bookedrooms".* FROM "bookedrooms" WHERE "bookedrooms"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
   [1m[36mBookedroom Load (0.2ms)[0m  [1m[34mSELECT  "bookedrooms".* FROM "bookedrooms" WHERE "bookedrooms"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
   [1m[36mBookedroom Load (0.1ms)[0m  [1m[34mSELECT  "bookedrooms".* FROM "bookedrooms" WHERE "bookedrooms"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Started GET "/" for 127.0.0.1 at 2016-09-22 17:05:01 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MainController#index as HTML
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 599ms (Views: 572.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user_login" for 127.0.0.1 at 2016-09-22 17:05:12 -0400
+Processing by UsersController#login as HTML
+  Rendering users/login.html.erb within layouts/application
+  Rendered users/_loginform.html.erb (42.2ms)
+  Rendered users/login.html.erb within layouts/application (44.7ms)
+Completed 200 OK in 129ms (Views: 97.9ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/validatelogin" for 127.0.0.1 at 2016-09-22 17:05:18 -0400
+Processing by UsersController#validatelogin as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YR1LyGTGIvhl2bmShM4Cr4u0CbVuOIq4tS4YTngEuGLzNUAHRQx6I/KV1i8yZfpeUb9V/PGmPNIFhLD404lAEA==", "user"=>{"email"=>"asda@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "asda@gmail.com"], ["LIMIT", 1]]
+Redirected to http://0.0.0.0:3000/user_login
+Completed 302 Found in 13ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/user_login" for 127.0.0.1 at 2016-09-22 17:05:18 -0400
+Processing by UsersController#login as HTML
+  Rendering users/login.html.erb within layouts/application
+  Rendered users/_loginform.html.erb (3.0ms)
+  Rendered users/login.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 57ms (Views: 54.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/validatelogin" for 127.0.0.1 at 2016-09-22 17:05:26 -0400
+Processing by UsersController#validatelogin as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2FU4RBEZKWN8OcuRAC6KIdkG2sqLQqVmXgb5CuUkuihKfTOLMNNxuOt1pCy2hXLQAw2GgxTcEwzurFG8TqlCWg==", "user"=>{"email"=>"anudeepvrm@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "anudeepvrm@gmail.com"], ["LIMIT", 1]]
+Redirected to http://0.0.0.0:3000/user_login
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/user_login" for 127.0.0.1 at 2016-09-22 17:05:26 -0400
+Processing by UsersController#login as HTML
+  Rendering users/login.html.erb within layouts/application
+  Rendered users/_loginform.html.erb (2.4ms)
+  Rendered users/login.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 52ms (Views: 50.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2016-09-22 17:05:30 -0400
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (5.1ms)
+  Rendered users/new.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 68ms (Views: 66.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2016-09-22 17:05:34 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PiTBZLB5m6meGPsp3mYA/YKA6QnVFtCct63Ao4OMlIqsDMqrkbPDcglUlJRozfgMWIu1QEqIZvYHB2gVKAFs+A==", "user"=>{"name"=>"anudeep", "email"=>"anudeepvrm@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "anudeepvrm@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (1.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "anudeep"], ["email", "anudeepvrm@gmail.com"], ["password", "9741899346"], ["created_at", 2016-09-22 17:05:34 -0400], ["updated_at", 2016-09-22 17:05:34 -0400]]
+  [1m[35m (12.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://0.0.0.0:3000/users/1
+Completed 302 Found in 48ms (ActiveRecord: 14.7ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2016-09-22 17:05:34 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 48ms (Views: 43.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/userhome" for 127.0.0.1 at 2016-09-22 17:05:36 -0400
+Processing by UsersController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/home.html.erb within layouts/application
+  Rendered users/_logout.html.erb (0.9ms)
+  Rendered users/home.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 62ms (Views: 58.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/userlogout" for 127.0.0.1 at 2016-09-22 17:05:39 -0400
+Processing by UsersController#logout as HTML
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-09-22 17:05:39 -0400
+Processing by MainController#index as HTML
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 66ms (Views: 64.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user_login" for 127.0.0.1 at 2016-09-22 17:05:40 -0400
+Processing by UsersController#login as HTML
+  Rendering users/login.html.erb within layouts/application
+  Rendered users/_loginform.html.erb (6.2ms)
+  Rendered users/login.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 65ms (Views: 62.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/validatelogin" for 127.0.0.1 at 2016-09-22 17:05:41 -0400
+Processing by UsersController#validatelogin as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+Xl5pwOh0hQqPP7ApEHdBoy/+vq7qcDW55XtiZVZwdZPZ1eSY5vGofu5YBBLCufGKJMqO9X375ZKDtQqiyQ1Og==", "user"=>{"email"=>"anudeepvrm@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "anudeepvrm@gmail.com"], ["LIMIT", 1]]
+Redirected to http://0.0.0.0:3000/userhome
+Completed 302 Found in 5ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/userhome" for 127.0.0.1 at 2016-09-22 17:05:41 -0400
+Processing by UsersController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/home.html.erb within layouts/application
+  Rendered users/_logout.html.erb (0.5ms)
+  Rendered users/home.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 48ms (Views: 44.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/useredit" for 127.0.0.1 at 2016-09-22 17:05:48 -0400
+Processing by UsersController#edit as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (6.5ms)
+  Rendered users/edit.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 80ms (Views: 74.2ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/users/1" for 127.0.0.1 at 2016-09-22 17:05:50 -0400
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qKrvmRem0DNtC9f002gXctugiuynkmc38Ej9ByC5bLoetMGsd5zEhryOSSQ8Iy2yf4xaLcnMSHdd08SkPsSYVg==", "user"=>{"name"=>"anudeepa", "email"=>"anudeepvrm@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Update User", "id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "users" SET "name" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["name", "anudeepa"], ["updated_at", 2016-09-22 17:05:50 -0400], ["id", 1]]
+  [1m[35m (8.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://0.0.0.0:3000/users/1
+Completed 302 Found in 20ms (ActiveRecord: 8.9ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2016-09-22 17:05:50 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 52ms (Views: 50.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/userhome" for 127.0.0.1 at 2016-09-22 17:05:52 -0400
+Processing by UsersController#home as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/home.html.erb within layouts/application
+  Rendered users/_logout.html.erb (0.6ms)
+  Rendered users/home.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 58ms (Views: 54.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/userlogout" for 127.0.0.1 at 2016-09-22 17:05:54 -0400
+Processing by UsersController#logout as HTML
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-09-22 17:05:54 -0400
+Processing by MainController#index as HTML
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 64ms (Views: 63.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user_login" for 127.0.0.1 at 2016-09-22 17:05:55 -0400
+Processing by UsersController#login as HTML
+  Rendering users/login.html.erb within layouts/application
+  Rendered users/_loginform.html.erb (5.3ms)
+  Rendered users/login.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 69ms (Views: 66.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2016-09-22 17:05:56 -0400
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (8.7ms)
+  Rendered users/new.html.erb within layouts/application (21.1ms)
+Completed 200 OK in 73ms (Views: 71.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2016-09-22 17:06:00 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YhVvUnpZxcidmSSa+KJrVynTIv+b/xJ3YCx49wl5U8zFI+j186IoAXc7ccFoyegxV3zjbWV5RdboJKK8/IzB7A==", "user"=>{"name"=>"dfsf", "email"=>"anudeepvrm@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "anudeepvrm@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (5.5ms)
+  Rendered users/new.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 92ms (Views: 50.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2016-09-22 17:06:04 -0400
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 59ms (Views: 56.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-09-22 17:06:08 -0400
+Processing by MainController#index as HTML
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 56ms (Views: 54.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user_login" for 127.0.0.1 at 2016-09-22 17:06:10 -0400
+Processing by UsersController#login as HTML
+  Rendering users/login.html.erb within layouts/application
+  Rendered users/_loginform.html.erb (4.3ms)
+  Rendered users/login.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 59ms (Views: 56.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/validatelogin" for 127.0.0.1 at 2016-09-22 17:06:11 -0400
+Processing by UsersController#validatelogin as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EFbroOlK9XoZbbXcufAoZdVkxs1Qr2xXYVuZuhdnzSG3YGwHYLEYs/PP4Icpm6sDq8sHX64pO/bpU0Px4pJfAQ==", "user"=>{"email"=>"anudeepvrm@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "anudeepvrm@gmail.com"], ["LIMIT", 1]]
+Redirected to http://0.0.0.0:3000/userhome
+Completed 302 Found in 3ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/userhome" for 127.0.0.1 at 2016-09-22 17:06:11 -0400
+Processing by UsersController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/home.html.erb within layouts/application
+  Rendered users/_logout.html.erb (0.5ms)
+  Rendered users/home.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 60ms (Views: 57.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/userlogout" for 127.0.0.1 at 2016-09-22 17:06:15 -0400
+Processing by UsersController#logout as HTML
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-09-22 17:06:15 -0400
+Processing by MainController#index as HTML
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 53ms (Views: 51.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/useredit" for 127.0.0.1 at 2016-09-22 17:06:18 -0400
+Processing by UsersController#edit as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+Completed 404 Not Found in 3ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=):
+  
+app/controllers/users_controller.rb:108:in `set_user'
+  Rendering /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (9.3ms)
+  Rendering /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.9ms)
+  Rendering /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (49.0ms)
+Started GET "/userhome" for 127.0.0.1 at 2016-09-22 17:06:23 -0400
+Processing by UsersController#home as HTML
+Redirected to http://0.0.0.0:3000/
+Filter chain halted as :check_session_id rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-09-22 17:06:23 -0400
+Processing by MainController#index as HTML
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 63ms (Views: 61.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user_login" for 127.0.0.1 at 2016-09-22 17:06:25 -0400
+Processing by UsersController#login as HTML
+  Rendering users/login.html.erb within layouts/application
+  Rendered users/_loginform.html.erb (3.9ms)
+  Rendered users/login.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 72ms (Views: 70.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/validatelogin" for 127.0.0.1 at 2016-09-22 17:06:58 -0400
+Processing by UsersController#validatelogin as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"v7h5R0cjwU3XXDC1yGpmkPf/NrDH1Flxv1RM6jG2j/CEqP5hgnZwfBDhI7l4FqQ5ChUqQnGrpPOkVHAUDsh4cA==", "user"=>{"email"=>"anudeepvrm@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "anudeepvrm@gmail.com"], ["LIMIT", 1]]
+Redirected to http://0.0.0.0:3000/userhome
+Completed 302 Found in 4ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/userhome" for 127.0.0.1 at 2016-09-22 17:06:58 -0400
+Processing by UsersController#home as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/home.html.erb within layouts/application
+  Rendered users/_logout.html.erb (0.7ms)
+  Rendered users/home.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 49ms (Views: 46.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/searchrooms" for 127.0.0.1 at 2016-09-22 17:07:01 -0400
+Processing by RoomsController#search_rooms as HTML
+  Rendering rooms/search_rooms.html.erb within layouts/application
+  Rendered rooms/_form.html.erb (14.6ms)
+  Rendered rooms/search_rooms.html.erb within layouts/application (16.4ms)
+Completed 200 OK in 80ms (Views: 59.1ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/search_result" for 127.0.0.1 at 2016-09-22 17:07:07 -0400
+Processing by RoomsController#get_search_rooms as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FLDpTXZP9OTnQPKZeGdcT1waczlN7jg29Hp+1RqfEIcvoG5rsxpF1SD94ZXIG57mofBvy/uRxbTvekIrJeHnBw==", "room"=>{"roomno"=>"", "building"=>"hunt", "size"=>"2", "status"=>"booked", "date(1i)"=>"2016", "date(2i)"=>"9", "date(3i)"=>"23", "date(4i)"=>"00", "date(5i)"=>"00"}, "commit"=>"search room"}
+  Rendering rooms/get_search_rooms.html.erb within layouts/application
+  Rendered rooms/get_search_rooms.html.erb within layouts/application (2.8ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    1: <tbody>
+    2: <% @rooms.each do |user| %>
+    3:     <tr>
+    4:       <td><%= user.roomno %></td>
+    5:       <td><%= user.building %></td>
+  
+app/views/rooms/get_search_rooms.html.erb:2:in `_app_views_rooms_get_search_rooms_html_erb___1879211005311518240_70012545592640'
+  Rendering /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (15.2ms)
+  Rendering /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.2ms)
+  Rendering /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (50.6ms)
+Started GET "/" for 127.0.0.1 at 2016-09-22 17:09:32 -0400
+Processing by MainController#index as HTML
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 51ms (Views: 48.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user_login" for 127.0.0.1 at 2016-09-22 17:11:02 -0400
+Processing by UsersController#login as HTML
+  Rendering users/login.html.erb within layouts/application
+  Rendered users/_loginform.html.erb (3.1ms)
+  Rendered users/login.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 67ms (Views: 51.1ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/validatelogin" for 127.0.0.1 at 2016-09-22 17:11:03 -0400
+Processing by UsersController#validatelogin as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cpfIj5ng4mKDuRZ1lWs+QuBOAMqnuzgjcK1O28IBATpJh0+pXLVTU0QEBXklF/zrHaQcOBHExaFrrXIl/X/2ug==", "user"=>{"email"=>"anudeepvrm@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "anudeepvrm@gmail.com"], ["LIMIT", 1]]
+Redirected to http://0.0.0.0:3000/userhome
+Completed 302 Found in 10ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/userhome" for 127.0.0.1 at 2016-09-22 17:11:03 -0400
+Processing by UsersController#home as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/home.html.erb within layouts/application
+  Rendered users/_logout.html.erb (0.6ms)
+  Rendered users/home.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 52ms (Views: 46.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/searchrooms" for 127.0.0.1 at 2016-09-22 17:11:05 -0400
+Processing by RoomsController#search_rooms as HTML
+  Rendering rooms/search_rooms.html.erb within layouts/application
+  Rendered rooms/_form.html.erb (11.4ms)
+  Rendered rooms/search_rooms.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 100ms (Views: 82.8ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/search_result" for 127.0.0.1 at 2016-09-22 17:11:06 -0400
+Processing by RoomsController#get_search_rooms as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"m4kpsKHljxeWqteHDgEU3ReNvNs1SAplNIxC164NbOagma6WZLA+JlEXxIu+fdZ06megKYM39+cvjH4pkXObZg==", "room"=>{"roomno"=>"", "building"=>"hunt", "size"=>"2", "status"=>"booked", "date(1i)"=>"2016", "date(2i)"=>"9", "date(3i)"=>"23", "date(4i)"=>"00", "date(5i)"=>"00"}, "commit"=>"search room"}
+  Rendering rooms/get_search_rooms.html.erb within layouts/application
+  [1m[36mRoom Load (0.2ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE (building = 'hunt' AND size = '2')[0m
+  Rendered rooms/get_search_rooms.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 59ms (Views: 54.3ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/search_result" for 127.0.0.1 at 2016-09-22 17:11:12 -0400
+Processing by RoomsController#get_search_rooms as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"m4kpsKHljxeWqteHDgEU3ReNvNs1SAplNIxC164NbOagma6WZLA+JlEXxIu+fdZ06megKYM39+cvjH4pkXObZg==", "room"=>{"roomno"=>"12", "building"=>"hunt", "size"=>"2", "status"=>"booked", "date(1i)"=>"2016", "date(2i)"=>"9", "date(3i)"=>"23", "date(4i)"=>"00", "date(5i)"=>"00"}, "commit"=>"search room"}
+  Rendering rooms/get_search_rooms.html.erb within layouts/application
+  [1m[36mRoom Load (0.3ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE (roomno = 12 AND building = 'hunt' AND size = '2')[0m
+  Rendered rooms/get_search_rooms.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 56ms (Views: 52.3ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/search_result" for 127.0.0.1 at 2016-09-22 17:11:16 -0400
+Processing by RoomsController#get_search_rooms as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"m4kpsKHljxeWqteHDgEU3ReNvNs1SAplNIxC164NbOagma6WZLA+JlEXxIu+fdZ06megKYM39+cvjH4pkXObZg==", "room"=>{"roomno"=>"1234", "building"=>"hunt", "size"=>"2", "status"=>"booked", "date(1i)"=>"2016", "date(2i)"=>"9", "date(3i)"=>"23", "date(4i)"=>"00", "date(5i)"=>"00"}, "commit"=>"search room"}
+  Rendering rooms/get_search_rooms.html.erb within layouts/application
+  [1m[36mRoom Load (0.3ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE (roomno = 1234 AND building = 'hunt' AND size = '2')[0m
+  Rendered rooms/get_search_rooms.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 54ms (Views: 50.3ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/search_result" for 127.0.0.1 at 2016-09-22 17:20:03 -0400
+Processing by RoomsController#get_search_rooms as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"m4kpsKHljxeWqteHDgEU3ReNvNs1SAplNIxC164NbOagma6WZLA+JlEXxIu+fdZ06megKYM39+cvjH4pkXObZg==", "room"=>{"roomno"=>"1234", "building"=>"hunt", "size"=>"2", "status"=>"booked", "date(1i)"=>"2016", "date(2i)"=>"9", "date(3i)"=>"23", "date(4i)"=>"00", "date(5i)"=>"00"}, "commit"=>"search room"}
+  Rendering rooms/get_search_rooms.html.erb within layouts/application
+  [1m[36mRoom Load (0.2ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE (roomno = 1234 AND building = 'hunt' AND size = '2')[0m
+  Rendered rooms/get_search_rooms.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 62ms (Views: 45.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-09-22 17:20:12 -0400
+Processing by MainController#index as HTML
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 66ms (Views: 64.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user_login" for 127.0.0.1 at 2016-09-22 17:26:45 -0400
+Processing by UsersController#login as HTML
+  Rendering users/login.html.erb within layouts/application
+  Rendered users/_loginform.html.erb (4.4ms)
+  Rendered users/login.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 77ms (Views: 56.7ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/validatelogin" for 127.0.0.1 at 2016-09-22 17:26:50 -0400
+Processing by UsersController#validatelogin as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7mvLTNGlN9GstjCebN6fjdKRfa/eYyamF0RHANY6/azVe0xqFPCG4GsLI5Lcol0kL3thXWgc2yQMRHv+6UQKLA==", "user"=>{"email"=>"anudeepvrm@sf.com", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "anudeepvrm@sf.com"], ["LIMIT", 1]]
+Redirected to http://0.0.0.0:3000/user_login
+Completed 302 Found in 6ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/user_login" for 127.0.0.1 at 2016-09-22 17:26:50 -0400
+Processing by UsersController#login as HTML
+  Rendering users/login.html.erb within layouts/application
+  Rendered users/_loginform.html.erb (3.4ms)
+  Rendered users/login.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 46ms (Views: 44.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2016-09-22 17:26:57 -0400
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (5.4ms)
+  Rendered users/new.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 57ms (Views: 54.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2016-09-22 17:27:19 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AKjSkDUqF0kVaZxJvNq4Hb8rjzoz6tOdItHExlr5ZIU7uFW28H+meNLUj0UMpnq0QsGTyIWVLh850fg4ZYeTBQ==", "user"=>{"name"=>"qweqwe", "email"=>"anudeepvrm@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "anudeepvrm@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (4.2ms)
+  Rendered users/new.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 69ms (Views: 51.2ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2016-09-22 17:27:48 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7rhc+DvGXYMUq+6pKcREz1NDPmh2yWZOPMUvTQavIfPVqNve/pPsstMW/aWZuIZmrqkimsC2m8wnxROzOdHWcw==", "user"=>{"name"=>"palak", "email"=>"palak@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "palak@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "palak"], ["email", "palak@gmail.com"], ["password", "9741899346"], ["created_at", 2016-09-22 17:27:48 -0400], ["updated_at", 2016-09-22 17:27:48 -0400]]
+  [1m[35m (4.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://0.0.0.0:3000/users/2
+Completed 302 Found in 23ms (ActiveRecord: 5.0ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2016-09-22 17:27:48 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 62ms (Views: 58.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/userhome" for 127.0.0.1 at 2016-09-22 17:27:51 -0400
+Processing by UsersController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/home.html.erb within layouts/application
+  Rendered users/_logout.html.erb (0.6ms)
+  Rendered users/home.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 66ms (Views: 63.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/userlogout" for 127.0.0.1 at 2016-09-22 17:27:54 -0400
+Processing by UsersController#logout as HTML
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-09-22 17:27:54 -0400
+Processing by MainController#index as HTML
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 47ms (Views: 45.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user_login" for 127.0.0.1 at 2016-09-22 17:27:56 -0400
+Processing by UsersController#login as HTML
+  Rendering users/login.html.erb within layouts/application
+  Rendered users/_loginform.html.erb (4.0ms)
+  Rendered users/login.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 58ms (Views: 55.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/validatelogin" for 127.0.0.1 at 2016-09-22 17:27:57 -0400
+Processing by UsersController#validatelogin as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"W0p3gpeb3IXRQUMwxyee+4+9xhfr4MTa1+CwjS1AJJBw5V52WhnGOVxi3DynxrQnObIIC3/7jK440hQEZ6HM5A==", "user"=>{"email"=>"anudeepvrm@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "anudeepvrm@gmail.com"], ["LIMIT", 1]]
+Redirected to http://0.0.0.0:3000/userhome
+Completed 302 Found in 9ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/userhome" for 127.0.0.1 at 2016-09-22 17:27:57 -0400
+Processing by UsersController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/home.html.erb within layouts/application
+  Rendered users/_logout.html.erb (0.6ms)
+  Rendered users/home.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 44ms (Views: 41.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/userlogout" for 127.0.0.1 at 2016-09-22 17:28:03 -0400
+Processing by UsersController#logout as HTML
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-09-22 17:28:03 -0400
+Processing by MainController#index as HTML
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 51ms (Views: 49.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/useredit" for 127.0.0.1 at 2016-09-22 17:28:06 -0400
+Processing by UsersController#edit as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+Completed 404 Not Found in 3ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=):
+  
+app/controllers/users_controller.rb:108:in `set_user'
+  Rendering /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (10.7ms)
+  Rendering /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.7ms)
+  Rendering /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (49.7ms)
+Started GET "/userhome" for 127.0.0.1 at 2016-09-22 17:28:10 -0400
+Processing by UsersController#home as HTML
+Redirected to http://0.0.0.0:3000/
+Filter chain halted as :check_session_id rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-09-22 17:28:10 -0400
+Processing by MainController#index as HTML
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 63ms (Views: 61.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user_login" for 127.0.0.1 at 2016-09-22 17:28:13 -0400
+Processing by UsersController#login as HTML
+  Rendering users/login.html.erb within layouts/application
+  Rendered users/_loginform.html.erb (2.7ms)
+  Rendered users/login.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 72ms (Views: 70.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/validatelogin" for 127.0.0.1 at 2016-09-22 17:28:14 -0400
+Processing by UsersController#validatelogin as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TMTldYDFkviNOhtlRzmcHWP7f8wraPMHiRzoKrsdVD4CV803pnYPUhnT7L17ufC6WzNcJsnK1tyZdz9K0Rhuqg==", "user"=>{"email"=>"anudeepvrm@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "anudeepvrm@gmail.com"], ["LIMIT", 1]]
+Redirected to http://0.0.0.0:3000/userhome
+Completed 302 Found in 6ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/userhome" for 127.0.0.1 at 2016-09-22 17:28:14 -0400
+Processing by UsersController#home as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/home.html.erb within layouts/application
+  Rendered users/_logout.html.erb (0.5ms)
+  Rendered users/home.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 47ms (Views: 44.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/useredit" for 127.0.0.1 at 2016-09-22 17:28:20 -0400
+Processing by UsersController#edit as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (7.0ms)
+  Rendered users/edit.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 76ms (Views: 73.2ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/users/1" for 127.0.0.1 at 2016-09-22 17:28:23 -0400
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DqT48EwIr8T8k7Wje2wzONJHQ24fLy4P++Snm4SsUqZAN9Cyarsybmh6QntH7F+f6o9ghP2NC9Trj3D77qloMg==", "user"=>{"name"=>"anudeep", "email"=>"anudeepvrm@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Update User", "id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (3.4ms)[0m  [1m[33mUPDATE "users" SET "name" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["name", "anudeep"], ["updated_at", 2016-09-22 17:28:23 -0400], ["id", 1]]
+  [1m[35m (4.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://0.0.0.0:3000/users/1
+Completed 302 Found in 22ms (ActiveRecord: 8.2ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2016-09-22 17:28:24 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 48ms (Views: 45.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/userhome" for 127.0.0.1 at 2016-09-22 17:28:25 -0400
+Processing by UsersController#home as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/home.html.erb within layouts/application
+  Rendered users/_logout.html.erb (0.7ms)
+  Rendered users/home.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 63ms (Views: 59.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/searchrooms" for 127.0.0.1 at 2016-09-22 17:28:27 -0400
+Processing by RoomsController#search_rooms as HTML
+  Rendering rooms/search_rooms.html.erb within layouts/application
+  Rendered rooms/_form.html.erb (8.5ms)
+  Rendered rooms/search_rooms.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 65ms (Views: 62.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/search_result" for 127.0.0.1 at 2016-09-22 17:28:39 -0400
+Processing by RoomsController#get_search_rooms as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Jr3u7BD3YqTKO6Sxx1kOuGqhKanjWmOOwHwh53KZ0e5oLsauNkT/Dl7SU2n72WIfUmkKQwH4RlXQF/aHGJzreg==", "room"=>{"roomno"=>"", "building"=>"hunt", "size"=>"2", "status"=>"booked", "date(1i)"=>"2016", "date(2i)"=>"9", "date(3i)"=>"23", "date(4i)"=>"11", "date(5i)"=>"00"}, "commit"=>"search room"}
+  Rendering rooms/get_search_rooms.html.erb within layouts/application
+  [1m[36mRoom Load (0.2ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE (building = 'hunt' AND size = '2')[0m
+  Rendered rooms/get_search_rooms.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 69ms (Views: 64.0ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/search_result" for 127.0.0.1 at 2016-09-22 17:28:43 -0400
+Processing by RoomsController#get_search_rooms as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Jr3u7BD3YqTKO6Sxx1kOuGqhKanjWmOOwHwh53KZ0e5oLsauNkT/Dl7SU2n72WIfUmkKQwH4RlXQF/aHGJzreg==", "room"=>{"roomno"=>"", "building"=>"hunt", "size"=>"2", "status"=>"booked", "date(1i)"=>"2016", "date(2i)"=>"4", "date(3i)"=>"23", "date(4i)"=>"11", "date(5i)"=>"00"}, "commit"=>"search room"}
+Redirected to http://0.0.0.0:3000/searchrooms
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/searchrooms" for 127.0.0.1 at 2016-09-22 17:28:43 -0400
+Processing by RoomsController#search_rooms as HTML
+  Rendering rooms/search_rooms.html.erb within layouts/application
+  Rendered rooms/_form.html.erb (8.0ms)
+  Rendered rooms/search_rooms.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 57ms (Views: 55.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/search_result" for 127.0.0.1 at 2016-09-22 17:28:56 -0400
+Processing by RoomsController#get_search_rooms as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Q7wXfT0OmxC6S5pv6HC/4PeELRqLWENryltSsYflG98NLz8/G70Gui6ibbfU8NNHz0wO8Gn6ZrDaMIXR7eAhSw==", "room"=>{"roomno"=>"", "building"=>"hunt", "size"=>"2", "status"=>"booked", "date(1i)"=>"2016", "date(2i)"=>"9", "date(3i)"=>"23", "date(4i)"=>"06", "date(5i)"=>"00"}, "commit"=>"search room"}
+  Rendering rooms/get_search_rooms.html.erb within layouts/application
+  [1m[36mRoom Load (0.4ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE (building = 'hunt' AND size = '2')[0m
+  Rendered rooms/get_search_rooms.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 60ms (Views: 56.0ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/search_result" for 127.0.0.1 at 2016-09-22 17:29:07 -0400
+Processing by RoomsController#get_search_rooms as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Q7wXfT0OmxC6S5pv6HC/4PeELRqLWENryltSsYflG98NLz8/G70Gui6ibbfU8NNHz0wO8Gn6ZrDaMIXR7eAhSw==", "room"=>{"roomno"=>"", "building"=>"hunt", "size"=>"2", "status"=>"booked", "date(1i)"=>"2016", "date(2i)"=>"9", "date(3i)"=>"23", "date(4i)"=>"06", "date(5i)"=>"00"}, "commit"=>"search room"}
+  Rendering rooms/get_search_rooms.html.erb within layouts/application
+  [1m[36mRoom Load (0.3ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE (building = 'hunt' AND size = '2')[0m
+  Rendered rooms/get_search_rooms.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 47ms (Views: 43.3ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/search_result" for 127.0.0.1 at 2016-09-22 17:29:12 -0400
+Processing by RoomsController#get_search_rooms as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Q7wXfT0OmxC6S5pv6HC/4PeELRqLWENryltSsYflG98NLz8/G70Gui6ibbfU8NNHz0wO8Gn6ZrDaMIXR7eAhSw==", "room"=>{"roomno"=>"12", "building"=>"hunt", "size"=>"2", "status"=>"booked", "date(1i)"=>"2016", "date(2i)"=>"9", "date(3i)"=>"23", "date(4i)"=>"06", "date(5i)"=>"00"}, "commit"=>"search room"}
+  Rendering rooms/get_search_rooms.html.erb within layouts/application
+  [1m[36mRoom Load (0.2ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE (roomno = 12 AND building = 'hunt' AND size = '2')[0m
+  Rendered rooms/get_search_rooms.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 53ms (Views: 48.8ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/search_result" for 127.0.0.1 at 2016-09-22 17:29:16 -0400
+Processing by RoomsController#get_search_rooms as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Q7wXfT0OmxC6S5pv6HC/4PeELRqLWENryltSsYflG98NLz8/G70Gui6ibbfU8NNHz0wO8Gn6ZrDaMIXR7eAhSw==", "room"=>{"roomno"=>"1234", "building"=>"hunt", "size"=>"2", "status"=>"booked", "date(1i)"=>"2016", "date(2i)"=>"9", "date(3i)"=>"23", "date(4i)"=>"06", "date(5i)"=>"00"}, "commit"=>"search room"}
+  Rendering rooms/get_search_rooms.html.erb within layouts/application
+  [1m[36mRoom Load (0.3ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE (roomno = 1234 AND building = 'hunt' AND size = '2')[0m
+  Rendered rooms/get_search_rooms.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 72ms (Views: 67.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/userhome" for 127.0.0.1 at 2016-09-22 17:42:49 -0400
+Processing by UsersController#home as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/home.html.erb within layouts/application
+  Rendered users/_logout.html.erb (0.7ms)
+  Rendered users/home.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 65ms (Views: 61.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/useredit" for 127.0.0.1 at 2016-09-22 17:42:51 -0400
+Processing by UsersController#edit as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (6.8ms)
+  Rendered users/edit.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 59ms (Views: 57.0ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/users/1" for 127.0.0.1 at 2016-09-22 17:42:53 -0400
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nDcPST8/0uPZa/X1hx6G1sMWFVBcOA1jKJgY9zeVEXHSpCcLGYxPSU2CAi27nupx+942ur6aKLg488+XXZAr5Q==", "user"=>{"name"=>"anudeep", "email"=>"anudeepvrm@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Update User", "id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://0.0.0.0:3000/users/1
+Completed 302 Found in 7ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2016-09-22 17:42:53 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 50ms (Views: 47.1ms | ActiveRecord: 0.3ms)
+
+
+  [1m[36mBookedroom Load (0.4ms)[0m  [1m[34mSELECT  "bookedrooms".* FROM "bookedrooms" WHERE "bookedrooms"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Started PATCH "/users/1" for 127.0.0.1 at 2016-09-22 17:44:35 -0400
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nDcPST8/0uPZa/X1hx6G1sMWFVBcOA1jKJgY9zeVEXHSpCcLGYxPSU2CAi27nupx+942ur6aKLg488+XXZAr5Q==", "user"=>{"name"=>"anudeep", "email"=>"anudeepvrm@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Update User", "id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (5.2ms)
+  Rendered users/edit.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 60ms (Views: 53.7ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/users/1" for 127.0.0.1 at 2016-09-22 17:44:37 -0400
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hz3Zs7c87ir8YnsKpUQDZMmtmK2AcMXlkiaaGEct+C3JrvHxkY9zgGiLjNKZxG/D8WW7R2LS4D6CTU14LSjCuQ==", "user"=>{"name"=>"anudeep", "email"=>"anudeepvrm@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Update User", "id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://0.0.0.0:3000/users/1
+Completed 302 Found in 5ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2016-09-22 17:44:37 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 50ms (Views: 48.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/userhome" for 127.0.0.1 at 2016-09-22 17:44:39 -0400
+Processing by UsersController#home as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/home.html.erb within layouts/application
+  Rendered users/_logout.html.erb (1.0ms)
+  Rendered users/home.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 53ms (Views: 47.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/searchrooms" for 127.0.0.1 at 2016-09-22 17:44:41 -0400
+Processing by RoomsController#search_rooms as HTML
+  Rendering rooms/search_rooms.html.erb within layouts/application
+  Rendered rooms/_form.html.erb (10.2ms)
+  Rendered rooms/search_rooms.html.erb within layouts/application (12.3ms)
+Completed 200 OK in 61ms (Views: 56.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/search_result" for 127.0.0.1 at 2016-09-22 17:44:51 -0400
+Processing by RoomsController#get_search_rooms as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hXn0z/2iWNVKz27cz0Tb5nUVJtaTtvgtIpuRgkWzh4/L6tyN2xHFf94mmQTzxLdBTd0FPHEU3fYy8EbiL7a9Gw==", "room"=>{"roomno"=>"", "building"=>"hunt", "size"=>"2", "status"=>"booked", "date(1i)"=>"2016", "date(2i)"=>"9", "date(3i)"=>"23", "date(4i)"=>"19", "date(5i)"=>"00"}, "commit"=>"search room"}
+  Rendering rooms/get_search_rooms.html.erb within layouts/application
+  [1m[36mRoom Load (0.3ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE (building = 'hunt' AND size = '2')[0m
+  Rendered rooms/get_search_rooms.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 59ms (Views: 56.1ms | ActiveRecord: 0.3ms)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", :environment]]
+DEPRECATION WARNING: Passing #original_exception is deprecated and has no effect. Exceptions will automatically capture the original exception. (called from require at bin/rails:4)
+  [1m[35m (13.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (4.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateAdmins (20160918045958)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "admins" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar, "password" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160918045958"]]
+  [1m[35m (4.7ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateUsers (20160920224642)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "password" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160920224642"]]
+  [1m[35m (4.0ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateRooms (20160922010240)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE TABLE "rooms" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "roomno" integer, "building" varchar, "size" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160922010240"]]
+  [1m[35m (5.3ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateBookedrooms (20160922012255)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "bookedrooms" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "status" varchar, "user_id" integer, "room_id" integer, "booking_time" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mselect sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_bookedrooms_on_user_id" ON "bookedrooms" ("user_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_bookedrooms_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_bookedrooms_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE  INDEX "index_bookedrooms_on_room_id" ON "bookedrooms" ("room_id")[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160922012255"]]
+  [1m[35m (5.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", 2016-09-22 18:12:04 -0400], ["updated_at", 2016-09-22 18:12:04 -0400]]
+  [1m[35m (4.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_bookedrooms_on_room_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_bookedrooms_on_room_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_bookedrooms_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_bookedrooms_on_user_id' AND type='index'
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "rooms" ("roomno", "building", "size", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["roomno", 1234], ["building", "hunt"], ["size", 2], ["created_at", 2016-09-22 18:12:11 -0400], ["updated_at", 2016-09-22 18:12:11 -0400]]
+  [1m[35m (7.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "bookedrooms" ("user_id", "room_id", "booking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 2], ["room_id", 1234], ["booking_time", 2016-09-22 18:12:11 -0400], ["created_at", 2016-09-22 18:12:11 -0400], ["updated_at", 2016-09-22 18:12:11 -0400]]
+  [1m[35m (4.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBookedroom Load (0.2ms)[0m  [1m[34mSELECT  "bookedrooms".* FROM "bookedrooms" WHERE "bookedrooms"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mBookedroom Load (0.3ms)[0m  [1m[34mSELECT  "bookedrooms".* FROM "bookedrooms" LIMIT ?[0m  [["LIMIT", 1]]
