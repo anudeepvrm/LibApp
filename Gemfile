@@ -3,13 +3,9 @@ source 'https://rubygems.org'
 gem 'remotipart'
 gem 'rails_admin', '>= 1.0.0.rc'
 
-# authentication and user roles.
-gem 'devise'
-gem 'cancancan'
-gem 'rolify'
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
+gem 'rake', '11.3.0'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use Puma as the app server
@@ -26,7 +22,7 @@ gem 'coffee-rails', '~> 4.2'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
-gem 'turbolinks', '~> 5'
+#gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
@@ -53,3 +49,13 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+gem 'devise'
+gem 'activeadmin', github: 'gregbell/active_admin'
+gem 'inherited_resources', github: 'activeadmin/inherited_resources'
+gem 'cancancan'
+#gem 'coffee-script-source', '1.9.0'
+gem 'rolify'
+gem 'wdm', '>= 0.1.0' if Gem.win_platform?
+gem 'execjs'
+gem 'coffee-script-source', '1.8.0'
