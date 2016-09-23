@@ -31,6 +31,7 @@ class RoomsController < ApplicationController
   end
 
 
+
   def get_search_rooms
     @room=Room.new(room_params)
     date=Time.new(@room.date[1].to_i, @room.date[2].to_i,
