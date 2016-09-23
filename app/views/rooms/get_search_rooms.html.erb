@@ -1,9 +1,24 @@
 <tbody>
-<% @rooms.each do |user| %>
-    <tr>
-      <td><%= user.roomno %></td>
-      <td><%= user.building %></td>
-      <td><%= user.size %></td>
-    </tr>
-<% end %>
-</tbody>
+<table>
+  <thead>
+  <tr>
+    <th>Select</th>
+    <th>Roomno</th>
+    <th>Building</th>
+    <th>Size</th>
+    <th>Status</th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @rooms.each do |user| %>
+      <tr>
+        <td><input type="radio" name="radio"></td>
+        <td><%= user.roomno %></td>
+        <td><%= user.building %></td>
+        <td><%= user.size %></td>
+        <td><%= user.status %></td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>

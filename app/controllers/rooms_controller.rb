@@ -30,9 +30,13 @@ class RoomsController < ApplicationController
       conditions << "roomno = #{@room.roomno}" if @room.roomno !=nil
       conditions << "building = '#{@room.building}'"
       conditions << "size = '#{@room.size}'"
-      temp_rooms = Room.where(conditions.join(" AND "))
-      temp_rooms.each do |room|
-        Bookedroom.where("room_id=? and cbooking_time = ? or booking_time = ")
+      @rooms = Room.where(conditions.join(" AND "))
+      @rooms.each do |room|
+        if Bookedroom.where("room_id=? and booking_time = ? or booking_time = ? ",room.roomno,date,date+3600).blank?
+          room.status='available'
+        else
+          room.status='booked'
+        end
 end
     end
     end
