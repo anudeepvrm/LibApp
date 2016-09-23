@@ -43,7 +43,6 @@ class RoomsController < ApplicationController
       redirect_to search_rooms_path, notice: 'Please Enter current or future Date.'
 
     else
-
       conditions = []
       conditions << "roomno = #{@room.roomno}" if @room.roomno !=nil
       conditions << "building = '#{@room.building}'"
@@ -52,13 +51,21 @@ class RoomsController < ApplicationController
       @rooms = Room.where(conditions.join(" AND "))
       @rooms.each do |room|
         room.date=date
-        if Bookedroom.where("room_id=? and booking_time = ? or booking_time = ? ",room.roomno,date,date+3600).blank?
+        list_of_booked_rooms=Bookedroom.where("room_id=?",room.roomno)
+        if list_of_booked_rooms.blank?
           room.status='available'
         else
-          room.status='booked'
+          if  list_of_booked_rooms.where("booking_time = ? or booking_time = ? or booking_time = ?",date,date+(3600),date-3600).blank?
+          room.status='available'
+          else
+            room.status='booked'
+          end
         end
-      end
 
+      end
+      @rooms=@rooms.select do |room|
+        room.status == @room.status
+      end
     end
     end
 

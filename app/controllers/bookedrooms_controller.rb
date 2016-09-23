@@ -60,7 +60,7 @@ class BookedroomsController < ApplicationController
   def destroy
     @bookedroom.destroy
     respond_to do |format|
-      format.html { redirect_to bookedrooms_url, notice: 'Bookedroom was successfully destroyed.' }
+      format.html { redirect_to user_home_path, notice: 'Bookedroom was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
