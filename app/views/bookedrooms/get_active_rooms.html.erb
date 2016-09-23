@@ -19,10 +19,8 @@
         <td><%= room.building %></td>
         <td><%= room.size %></td>
         <td><%= bookedroom.status %></td>
+        <td><%= link_to_if (room.status == 'available'), 'Book', confirm_booking_path(:id => room.roomno, :date=>@date) %></td>
       </tr>
   <% end %>
   </tbody>
 </table>
-<div>
-<%= link_to 'go to home', user_home_path %>
-  </div>

@@ -16,11 +16,11 @@ class RoomsController < ApplicationController
   end
 
   def book_room
-    room=Room.new(room_params)
-    booked_room=Bookedroom.new(:user_id=>session[:current_user_id],:room_id=>room.roomno,:status=>'booked',:booking_time=>room.date)
+
+    booked_room=Bookedroom.new(:user_id=>session[:current_user_id],:room_id=>params[:id],:status=>'booked',:booking_time=>params[:date].to_datetime.in_time_zone('UTC'))
     respond_to do |format|
       if booked_room.save
-        format.html { redirect_to user_home_path, notice: 'Room was successfully created.' }
+        format.html { redirect_to user_home_path, notice: 'Room was successfully created' }
         format.json { render :show, status: :created, location: @room }
       else
         format.html { render user_home_path, notice: 'Sorry. Try Again' }
@@ -37,25 +37,28 @@ class RoomsController < ApplicationController
     date=Time.new(@room.date[1].to_i, @room.date[2].to_i,
                              @room.date[3].to_i, @room.date[4].to_i,
                              @room.date[5].to_i)
+    @date=date
     @room.date=date
     if date.past?
       redirect_to search_rooms_path, notice: 'Please Enter current or future Date.'
 
     else
-        if date
+
       conditions = []
       conditions << "roomno = #{@room.roomno}" if @room.roomno !=nil
       conditions << "building = '#{@room.building}'"
       conditions << "size = '#{@room.size}'"
+
       @rooms = Room.where(conditions.join(" AND "))
       @rooms.each do |room|
+        room.date=date
         if Bookedroom.where("room_id=? and booking_time = ? or booking_time = ? ",room.roomno,date,date+3600).blank?
           room.status='available'
         else
           room.status='booked'
         end
-end
-    end
+      end
+
     end
     end
 

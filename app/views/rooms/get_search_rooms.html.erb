@@ -1,31 +1,30 @@
-<tbody>
-<%= form_tag("/", :method => "post") do %>
-<table id="rooms">
+<p id="notice"><%= notice %></p>
+
+<h1>Searched Rooms</h1>
+
+<table>
   <thead>
   <tr>
-    <th>Select</th>
     <th>Roomno</th>
     <th>Building</th>
     <th>Size</th>
     <th>Status</th>
+    <th>Action</th>
+    <th colspan="3"></th>
   </tr>
   </thead>
 
-  <tbody>c
-  <% @rooms.each do |user| %>
+  <tbody>
+  <% @rooms.each do |room| %>
       <tr>
-        <td><%= radio_button_tag(:selected_room, "selected_room") %></td>
-        <td><%= user.roomno %></td>
-        <td><%= user.building %></td>
-        <td><%= user.size %></td>
-        <td><%= user.status %></td>
+        <td><%= room.roomno %></td>
+        <td><%= room.building %></td>
+        <td><%= room.size %></td>
+        <td><%= room.status %></td>
+        <td><%= link_to_if (room.status == 'available'), 'Book', confirm_booking_path(:id => room.roomno, :date=>@date) %></td>
+
+      </tr>
       </tr>
   <% end %>
   </tbody>
 </table>
-<%= submit_tag("Submit") %>
-<% end %>
-
-$('#rooms tr').click(function() {
-$(this).find('th input:radio').prop('checked', true);
-})
