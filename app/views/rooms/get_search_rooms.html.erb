@@ -1,5 +1,6 @@
 <tbody>
-<table>
+<%= form_tag("/", :method => "post") do %>
+<table id="rooms">
   <thead>
   <tr>
     <th>Select</th>
@@ -13,7 +14,7 @@
   <tbody>
   <% @rooms.each do |user| %>
       <tr>
-        <td><input type="radio" name="radio"></td>
+        <td><%= radio_button_tag(:selected_room, "selected_room") %></td>
         <td><%= user.roomno %></td>
         <td><%= user.building %></td>
         <td><%= user.size %></td>
@@ -22,3 +23,9 @@
   <% end %>
   </tbody>
 </table>
+<%= submit_tag("Submit") %>
+<% end %>
+
+$('#rooms tr').click(function() {
+$(this).find('th input:radio').prop('checked', true);
+})
