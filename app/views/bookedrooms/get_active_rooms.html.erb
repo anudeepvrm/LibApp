@@ -7,19 +7,21 @@
     <th>Size</th>
     <th>Status</th>
     <th>Booking Time</th>
+    <th>Action</th>
   </tr>
   </thead>
 
   <tbody>c
   <% @rooms.each do |bookedroom| %>
       <tr>
-        <%room=Room.where("roomno = ?",bookedroom.room_id)%>
-        <td><input type="radio" name="radio"></td>
+        <%@temp_room=Room.where("roomno = ?",bookedroom.room_id).take%>
+
         <td><%= bookedroom.room_id %></td>
-        <td><%= room.building %></td>
-        <td><%= room.size %></td>
-        <td><%= bookedroom.status %></td>
-        <td><%= link_to_if (room.status == 'available'), 'Book', confirm_booking_path(:id => room.roomno, :date=>@date) %></td>
+        <td><%= @temp_room.building %></td>
+        <td><%= @temp_room.size %></td>
+        <td>Booked</td>
+        <td><%= bookedroom.booking_time %></td>
+        <td><%= link_to 'Cancel Booking', cancel_booking_path(:id => bookedroom.room_id) %></td>
       </tr>
   <% end %>
   </tbody>
