@@ -14,5 +14,6 @@ Rails.application.routes.draw do
   match '/searchrooms' => 'rooms#search_rooms', :as => :search_rooms, via: :get
   match '/search_result' => 'rooms#get_search_rooms', :as => :search_result, via: :post
   match '/getroomlist' => 'rooms#get_room_list', :as => :get_room_list, via: :get
+  match '/activerooms' => 'bookedroom#get_active_rooms', :as => :active_rooms_path, via: :get
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

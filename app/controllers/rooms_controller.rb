@@ -15,6 +15,23 @@ class RoomsController < ApplicationController
   def get_room_list
   end
 
+  def book_room
+    room=Room.new(room_params)
+    booked_room=Bookedroom.new(:user_id=>session[:current_user_id],:room_id=>room.roomno,:status=>'booked',:booking_time=>room.date)
+    respond_to do |format|
+      if booked_room.save
+        format.html { redirect_to user_home_path, notice: 'Room was successfully created.' }
+        format.json { render :show, status: :created, location: @room }
+      else
+        format.html { render user_home_path, notice: 'Sorry. Try Again' }
+        format.json { render json: @room.errors, status: :unprocessable_entity }
+      end
+    end
+
+  end
+
+
+
   def get_search_rooms
     @room=Room.new(room_params)
     date=Time.new(@room.date[1].to_i, @room.date[2].to_i,

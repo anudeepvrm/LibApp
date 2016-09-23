@@ -7,6 +7,10 @@ class BookedroomsController < ApplicationController
     @bookedrooms = Bookedroom.all
   end
 
+  def get_active_rooms
+    @rooms=Bookedroom.where("user_id=?",session[:current_user_id])
+  end
+
   # GET /bookedrooms/1
   # GET /bookedrooms/1.json
   def show
