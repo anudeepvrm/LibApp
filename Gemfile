@@ -58,6 +58,6 @@ gem 'cancancan'
 #gem 'coffee-script-source', '1.9.0'
 gem 'rolify'
 gem 'wdm', '>= 0.1.0' if Gem.win_platform?
-#gem 'execjs'
+gem 'execjs'
 gem 'coffee-script-source', '1.8.0'
 gem 'whenever', require: false
