@@ -34,6 +34,7 @@ class RoomsController < ApplicationController
 
   def get_search_rooms
     @room=Room.new(room_params)
+    @id=session[:current_user_id]
     date=Time.new(@room.date[1].to_i, @room.date[2].to_i,
                              @room.date[3].to_i, @room.date[4].to_i,
                              @room.date[5].to_i)
