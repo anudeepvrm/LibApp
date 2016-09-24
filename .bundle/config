@@ -1,4 +1,0 @@
----
-BUNDLE_WITHOUT: "production"
-BUNDLE_PATH: "/home/tom/.gem"
-BUNDLE_DISABLE_SHARED_GEMS: "true"

@@ -1,1 +1,0 @@
-json.partial! "bookedrooms/bookedroom", bookedroom: @bookedroom
