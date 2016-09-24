@@ -66,8 +66,10 @@ class RoomsController < ApplicationController
         end
 
       end
+      if @room.status != 'any'
       @rooms=@rooms.select do |room|
         room.status == @room.status
+      end
       end
     end
     end
