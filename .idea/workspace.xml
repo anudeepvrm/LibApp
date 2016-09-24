@@ -5,8 +5,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/NJ/NJcz478EASnZfP90G5y9-Re7lxfHRGqyHVPDW5DJEj4.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/NJ/NJcz478EASnZfP90G5y9-Re7lxfHRGqyHVPDW5DJEj4.cache" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/UW/UWfLF5US1FkKlBY8ZGYfl3aFCwxHgju9oD0MEXeNhFs.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/UW/UWfLF5US1FkKlBY8ZGYfl3aFCwxHgju9oD0MEXeNhFs.cache" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/YC/ycjEqpQZK7t4NcBoqbpQ1PxOceIZF9wEvHZy9dsfUAE.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/YC/ycjEqpQZK7t4NcBoqbpQ1PxOceIZF9wEvHZy9dsfUAE.cache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/application.rb" afterPath="$PROJECT_DIR$/config/application.rb" />
     </list>
     <ignored path="LibraryApp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -431,12 +429,12 @@
       <workItem from="1474605767031" duration="6263000" />
       <workItem from="1474677468696" duration="41000" />
       <workItem from="1474677578633" duration="293000" />
-      <workItem from="1474681597321" duration="3253000" />
+      <workItem from="1474681597321" duration="3576000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22599000" />
+    <option name="totallyTimeSpent" value="22922000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
