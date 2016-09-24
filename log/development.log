@@ -3439,3 +3439,11 @@ Processing by RoomsController#get_search_rooms as HTML
 Completed 200 OK in 997ms (Views: 942.4ms | ActiveRecord: 7.0ms)
 
 
+Started GET "/" for ::1 at 2016-09-24 01:27:36 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MainController#index as HTML
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (71.0ms)
+Completed 200 OK in 3692ms (Views: 3671.1ms | ActiveRecord: 0.0ms)
+
+

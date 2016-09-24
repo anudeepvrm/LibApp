@@ -13,7 +13,5 @@ module Libapp
     # -- all .rb files in that directory are automatically loaded.
     config.time_zone = 'Riga'
     config.active_record.default_timezone = 'utc'
-    # config/application.rb
-    config.assets.initialize_on_precompile = false
   end
 end
