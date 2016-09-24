@@ -19262,3 +19262,64 @@ puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
   Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
   Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
   Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (2867.2ms)
+Started GET "/" for 127.0.0.1 at 2016-09-23 14:07:04 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MainController#index as HTML
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 6032ms (Views: 5999.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user_login" for 127.0.0.1 at 2016-09-23 14:07:17 -0400
+Processing by UsersController#login as HTML
+  Rendering users/login.html.erb within layouts/application
+  Rendered users/_loginform.html.erb (131.5ms)
+  Rendered users/login.html.erb within layouts/application (192.5ms)
+Completed 200 OK in 1196ms (Views: 1150.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2016-09-23 14:07:21 -0400
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (7.0ms)
+  Rendered users/new.html.erb within layouts/application (79.0ms)
+Completed 200 OK in 1000ms (Views: 974.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2016-09-23 14:07:40 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mHLurRiq/IOL+NmioLUkxp2FMIUqcuVrL1WPwC3BGujJchUbn5DlJC6bBg0Ati8v56Go5cHPxuB5E+49Iu0yBg==", "user"=>{"name"=>"Jitin", "email"=>"jkumar3@ncsu.edu", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "jkumar3@ncsu.edu"], ["LIMIT", 1]]
+  [1m[35mSQL (7.9ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Jitin"], ["email", "jkumar3@ncsu.edu"], ["password", "password"], ["created_at", 2016-09-23 14:07:40 -0400], ["updated_at", 2016-09-23 14:07:40 -0400]]
+  [1m[35m (139.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 225ms (ActiveRecord: 147.1ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2016-09-23 14:07:41 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 1080ms (Views: 949.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/userhome" for 127.0.0.1 at 2016-09-23 14:07:51 -0400
+Processing by UsersController#home as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/home.html.erb within layouts/application
+  Rendered users/_logout.html.erb (4.0ms)
+  Rendered users/home.html.erb within layouts/application (44.0ms)
+Completed 200 OK in 976ms (Views: 939.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/searchrooms" for 127.0.0.1 at 2016-09-23 14:07:57 -0400
+Processing by RoomsController#search_rooms as HTML
+  Rendering rooms/search_rooms.html.erb within layouts/application
+  Rendered rooms/_form.html.erb (4374.5ms)
+  Rendered rooms/search_rooms.html.erb within layouts/application (8231.0ms)
+Completed 200 OK in 9251ms (Views: 9200.1ms | ActiveRecord: 0.0ms)
+
+
