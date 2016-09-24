@@ -14,6 +14,7 @@ end
 
 group :production do
   gem 'pg'
+  gem 'rails_12factor'
 end
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
@@ -68,3 +69,5 @@ gem 'execjs'
 gem 'coffee-script-source', '1.8.0'
 gem 'whenever', require: false
 gem 'heroku'
+gem 'rack-cache'
+gem 'dalli'
