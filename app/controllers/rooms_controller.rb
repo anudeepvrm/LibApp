@@ -59,7 +59,7 @@ class RoomsController < ApplicationController
         if list_of_booked_rooms.blank?
           room.status='available'
         else
-          if  list_of_booked_rooms.where("booking_time = ? or booking_time = ? or booking_time = ?",date,date+(3600),date-3600).blank?
+          if  list_of_booked_rooms.where("booking_time > ? and booking_time < ? ",date-2*(3600),date+2*3600).blank?
           room.status='available'
           else
             room.status='booked'
