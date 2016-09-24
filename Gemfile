@@ -10,7 +10,7 @@ gem 'rake', '11.3.0'
 group :development, :test do
   gem 'sqlite3'
 end
-
+gem 'pg'
 group :production do
   gem 'pg', '0.15.1'
 end
