@@ -1,4 +1,8 @@
-set :output, 'G:/OODD/Ruby/Project/LibApp/log/whenever.log'
-every 1.minutes do
-  command "rm G:/OODD/Ruby/Project/LibApp/log/text.txt", environment => "development"
-end
+set :output, '~/whenever.log'
+set :environment,'development'
+
+  every 30.minutes, at: 00, :environment => :development do
+    runner "Bookedroom.where(\"booking_time=?\",Time.now.beginning_of_minute).destroy_all"
+    command "echo 'Start'"
+  end
+
