@@ -40,7 +40,10 @@ class RoomsController < ApplicationController
     @date=date
     @room.date=date
     if date.past?
-      redirect_to search_rooms_path, notice: 'Please Enter current or future Date.'
+      redirect_to search_rooms_path, notice: 'Please book future time slot. eg: if time is 1:13, you can\'t book 1:00 slot'
+
+    elsif date>Time.now+24*3600*7
+      redirect_to search_rooms_path, notice: 'Only can book one week in advance'
 
     else
       conditions = []
