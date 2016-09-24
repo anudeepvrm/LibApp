@@ -10,10 +10,10 @@ gem 'rake', '11.3.0'
 group :development, :test do
   gem 'sqlite3'
 end
-gem 'pg'
 group :production do
-  gem 'pg', '0.15.1'
+  gem 'pg'
 end
+
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
