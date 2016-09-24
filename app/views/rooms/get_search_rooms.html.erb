@@ -1,6 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Searched Rooms</h1>
+<h6>NOTE: Can't Book if you have an active booking</h6>
 
 <table>
   <thead>
@@ -21,10 +22,11 @@
         <td><%= room.building %></td>
         <td><%= room.size %></td>
         <td><%= room.status %></td>
-        <td><%= link_to_if (room.status == 'available'), 'Book', confirm_booking_path(:id => room.roomno, :date=>@date) %></td>
+        <td><%= link_to_if (room.status == 'available' and Bookedroom.find_by(user_id: @id ).blank?), 'Book', confirm_booking_path(:id => room.roomno, :date=>@date) %></td>
 
       </tr>
       </tr>
   <% end %>
   </tbody>
 </table>
+<%= link_to 'go to home', user_home_path %>

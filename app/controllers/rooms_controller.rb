@@ -34,13 +34,17 @@ class RoomsController < ApplicationController
 
   def get_search_rooms
     @room=Room.new(room_params)
+    @id=session[:current_user_id]
     date=Time.new(@room.date[1].to_i, @room.date[2].to_i,
                              @room.date[3].to_i, @room.date[4].to_i,
                              @room.date[5].to_i)
     @date=date
     @room.date=date
     if date.past?
-      redirect_to search_rooms_path, notice: 'Please Enter current or future Date.'
+      redirect_to search_rooms_path, notice: 'Please book future time slot. eg: if time is 1:13, you can\'t book 1:00 slot'
+
+    elsif date>Time.now+24*3600*7
+      redirect_to search_rooms_path, notice: 'Only can book one week in advance'
 
     else
       conditions = []
@@ -55,7 +59,7 @@ class RoomsController < ApplicationController
         if list_of_booked_rooms.blank?
           room.status='available'
         else
-          if  list_of_booked_rooms.where("booking_time = ? or booking_time = ? or booking_time = ?",date,date+(3600),date-3600).blank?
+          if  list_of_booked_rooms.where("booking_time > ? and booking_time < ? ",date-2*(3600),date+2*3600).blank?
           room.status='available'
           else
             room.status='booked'
@@ -63,8 +67,10 @@ class RoomsController < ApplicationController
         end
 
       end
+      if @room.status != 'any'
       @rooms=@rooms.select do |room|
         room.status == @room.status
+      end
       end
     end
     end
