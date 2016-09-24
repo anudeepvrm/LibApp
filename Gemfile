@@ -10,6 +10,7 @@ gem 'rake', '11.3.0'
 #gem 'sqlite3'
 group :development, :test do
   gem 'pg'
+  gem 'rails_12factor'
 end
 
 group :production do
