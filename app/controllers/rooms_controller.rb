@@ -15,26 +15,57 @@ class RoomsController < ApplicationController
   def get_room_list
   end
 
+  def book_room
+
+    booked_room=Bookedroom.new(:user_id=>session[:current_user_id],:room_id=>params[:id],:status=>'booked',:booking_time=>params[:date].to_datetime.in_time_zone('UTC'))
+    respond_to do |format|
+      if booked_room.save
+        format.html { redirect_to user_home_path, notice: 'Room was successfully created' }
+        format.json { render :show, status: :created, location: @room }
+      else
+        format.html { render user_home_path, notice: 'Sorry. Try Again' }
+        format.json { render json: @room.errors, status: :unprocessable_entity }
+      end
+    end
+
+  end
+
+
+
   def get_search_rooms
     @room=Room.new(room_params)
     date=Time.new(@room.date[1].to_i, @room.date[2].to_i,
                              @room.date[3].to_i, @room.date[4].to_i,
                              @room.date[5].to_i)
+    @date=date
     @room.date=date
     if date.past?
       redirect_to search_rooms_path, notice: 'Please Enter current or future Date.'
 
     else
-        if date
       conditions = []
       conditions << "roomno = #{@room.roomno}" if @room.roomno !=nil
       conditions << "building = '#{@room.building}'"
       conditions << "size = '#{@room.size}'"
-      temp_rooms = Room.where(conditions.join(" AND "))
-      temp_rooms.each do |room|
-        Bookedroom.where("room_id=? and cbooking_time = ? or booking_time = ")
-end
-    end
+
+      @rooms = Room.where(conditions.join(" AND "))
+      @rooms.each do |room|
+        room.date=date
+        list_of_booked_rooms=Bookedroom.where("room_id=?",room.roomno)
+        if list_of_booked_rooms.blank?
+          room.status='available'
+        else
+          if  list_of_booked_rooms.where("booking_time = ? or booking_time = ? or booking_time = ?",date,date+(3600),date-3600).blank?
+          room.status='available'
+          else
+            room.status='booked'
+          end
+        end
+
+      end
+      @rooms=@rooms.select do |room|
+        room.status == @room.status
+      end
     end
     end
 

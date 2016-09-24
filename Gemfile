@@ -7,7 +7,14 @@ gem 'rails_admin', '>= 1.0.0.rc'
 gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
 gem 'rake', '11.3.0'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+#gem 'sqlite3'
+group :development, :test do
+  gem 'sqlite3'
+end
+
+group :production do
+  gem 'pg'
+end
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
@@ -60,3 +67,4 @@ gem 'wdm', '>= 0.1.0' if Gem.win_platform?
 gem 'execjs'
 gem 'coffee-script-source', '1.8.0'
 gem 'whenever', require: false
+gem 'heroku'

@@ -1,9 +1,30 @@
-<tbody>
-<% @rooms.each do |user| %>
-    <tr>
-      <td><%= user.roomno %></td>
-      <td><%= user.building %></td>
-      <td><%= user.size %></td>
-    </tr>
-<% end %>
-</tbody>
+<p id="notice"><%= notice %></p>
+
+<h1>Searched Rooms</h1>
+
+<table>
+  <thead>
+  <tr>
+    <th>Roomno</th>
+    <th>Building</th>
+    <th>Size</th>
+    <th>Status</th>
+    <th>Action</th>
+    <th colspan="3"></th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @rooms.each do |room| %>
+      <tr>
+        <td><%= room.roomno %></td>
+        <td><%= room.building %></td>
+        <td><%= room.size %></td>
+        <td><%= room.status %></td>
+        <td><%= link_to_if (room.status == 'available'), 'Book', confirm_booking_path(:id => room.roomno, :date=>@date) %></td>
+
+      </tr>
+      </tr>
+  <% end %>
+  </tbody>
+</table>

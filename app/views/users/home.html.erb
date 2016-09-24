@@ -1,3 +1,4 @@
+<p id="notice"><%= notice %></p>
 <h1>Welcome </h1>
 <div>
   <%= @user.name%>
@@ -13,4 +14,8 @@
 
 <div>
   <%=link_to 'search rooms', search_rooms_path%>
+</div>
+
+<div>
+  <%=link_to 'active rooms', active_rooms_path%>
 </div>
