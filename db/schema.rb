@@ -65,7 +65,7 @@ ActiveRecord::Schema.define(version: 20160925014743) do
     t.integer  "user_id"
     t.string   "user_name"
     t.integer  "room_no"
-    t.integer  "building"
+    t.string   "building"
     t.integer  "size"
     t.datetime "booking_time"
     t.datetime "release_time"
