@@ -20,7 +20,7 @@
         <td><%= @temp_room.building %></td>
         <td><%= @temp_room.size %></td>
         <td>Booked</td>
-        <td><%= bookedroom.booking_time.strftime("%d %B %Y %I:%M %p") %></td>
+        <td><%= bookedroom.booking_time.in_time_zone('UTC').strftime("%d %B %Y %I:%M %p") %></td>
         <td><%= link_to 'Cancel Booking', cancel_booking_path(:id => bookedroom.id) %></td>
       </tr>
   <% end %>
