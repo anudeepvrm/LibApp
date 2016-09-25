@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160923025029) do
+ActiveRecord::Schema.define(version: 20160925014743) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace"
@@ -59,6 +59,18 @@ ActiveRecord::Schema.define(version: 20160923025029) do
     t.datetime "updated_at",   null: false
     t.index ["room_id"], name: "index_bookedrooms_on_room_id"
     t.index ["user_id"], name: "index_bookedrooms_on_user_id"
+  end
+
+  create_table "bookinghistories", force: :cascade do |t|
+    t.integer  "user_id"
+    t.string   "user_name"
+    t.integer  "room_no"
+    t.integer  "building"
+    t.integer  "size"
+    t.datetime "booking_time"
+    t.datetime "release_time"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
   end
 
   create_table "rooms", force: :cascade do |t|

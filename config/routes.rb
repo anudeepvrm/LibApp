@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :bookinghistories
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   resources :bookedrooms
@@ -19,6 +20,7 @@ Rails.application.routes.draw do
   match '/activerooms' => 'bookedrooms#get_active_rooms', :as => :active_rooms, via: :get
   match '/bookroom/:id/:date', to: 'rooms#book_room', :as => :confirm_booking, via: :get
   match '/cancelbooking/:id', to: 'bookedrooms#destroy', :as => :cancel_booking, via: :get
+  match '/bookinghistory', to: 'bookinghistories#show', :as => :booking_history, via: :get
   #match '/confirmroom/:id' => 'rooms#book_room', :as => :confirm_booking, via: :get
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

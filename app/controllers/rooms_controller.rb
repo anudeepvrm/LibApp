@@ -20,7 +20,7 @@ class RoomsController < ApplicationController
     booked_room=Bookedroom.new(:user_id=>session[:current_user_id],:room_id=>params[:id],:status=>'booked',:booking_time=>params[:date].to_datetime.in_time_zone('UTC'))
     respond_to do |format|
       if booked_room.save
-        format.html { redirect_to user_home_path, notice: 'Room was successfully created' }
+        format.html { redirect_to user_home_path, notice: 'Room was successfully booked. NOTE: You can have only one active booking' }
         format.json { render :show, status: :created, location: @room }
       else
         format.html { render user_home_path, notice: 'Sorry. Try Again' }

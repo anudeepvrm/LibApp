@@ -60,7 +60,11 @@ class BookedroomsController < ApplicationController
   def destroy
     @bookedroom.destroy
     respond_to do |format|
-      format.html { redirect_to user_home_path, notice: 'Bookedroom was successfully destroyed.' }
+      user=User.find(@bookedroom.user_id)
+      room=Room.find_by(:roomno => @bookedroom.room_id)
+      bookinghistory=Bookinghistory.new(:user_id =>@bookedroom.user_id,:user_name => user.name,:room_no => @bookedroom.room_id, :building=>room.building, :size => room.size, :booking_time=>@bookedroom.booking_time,:release_time=>Time.now.in_time_zone('UTC'))
+      bookinghistory.save
+      format.html { redirect_to user_home_path, notice: 'Bookedroom was successfully cancelled.' }
       format.json { head :no_content }
     end
   end

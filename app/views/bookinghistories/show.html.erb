@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Bookinghistories</h1>
+
+<table>
+  <thead>
+  <tr>
+    <th>Room No</th>
+    <th>Building</th>
+    <th>Size</th>
+    <th>Booking Time</th>
+    <th>Release Time</th>
+    <th></th>
+
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @bookinghistory.each do |bookinghistory| %>
+      <tr>
+      <td><%= bookinghistory.room_no %></td>
+      <td><%= bookinghistory.building %></td>
+      <td><%= bookinghistory.size %></td>
+      <td><%= (bookinghistory.booking_time+3600).strftime("%d %B %Y %I:%M %p") %></td>
+      <td><%= bookinghistory.release_time.in_time_zone('UTC').strftime("%d %B %Y %I:%M %p")%></td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>
