@@ -1450,3 +1450,161 @@ Processing by RoomsController#search_rooms as HTML
 Completed 200 OK in 231ms (Views: 228.9ms | ActiveRecord: 0.0ms)
 
 
+  [1m[36mBookedroom Load (3.4ms)[0m  [1m[34mSELECT "bookedrooms".* FROM "bookedrooms" WHERE (booking_time='2016-09-25 01:00:00')[0m
+Started GET "/activerooms" for 127.0.0.1 at 2016-09-25 01:02:25 -0400
+Processing by BookedroomsController#get_active_rooms as HTML
+  Rendering bookedrooms/get_active_rooms.html.erb within layouts/application
+  [1m[36mBookedroom Load (0.4ms)[0m  [1m[34mSELECT "bookedrooms".* FROM "bookedrooms" WHERE (user_id=1)[0m
+  Rendered bookedrooms/get_active_rooms.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 270ms (Views: 266.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/userhome" for 127.0.0.1 at 2016-09-25 01:02:27 -0400
+Processing by UsersController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/home.html.erb within layouts/application
+  Rendered users/_logout.html.erb (1.1ms)
+  Rendered users/home.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 248ms (Views: 245.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/activerooms" for 127.0.0.1 at 2016-09-25 01:02:29 -0400
+Processing by BookedroomsController#get_active_rooms as HTML
+  Rendering bookedrooms/get_active_rooms.html.erb within layouts/application
+  [1m[36mBookedroom Load (0.8ms)[0m  [1m[34mSELECT "bookedrooms".* FROM "bookedrooms" WHERE (user_id=1)[0m
+  Rendered bookedrooms/get_active_rooms.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 306ms (Views: 302.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/userhome" for 127.0.0.1 at 2016-09-25 01:02:31 -0400
+Processing by UsersController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/home.html.erb within layouts/application
+  Rendered users/_logout.html.erb (1.0ms)
+  Rendered users/home.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 288ms (Views: 284.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/searchrooms" for 127.0.0.1 at 2016-09-25 01:02:33 -0400
+Processing by RoomsController#search_rooms as HTML
+  Rendering rooms/search_rooms.html.erb within layouts/application
+  Rendered rooms/_form.html.erb (7.9ms)
+  Rendered rooms/search_rooms.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 191ms (Views: 189.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/search_result" for 127.0.0.1 at 2016-09-25 01:02:35 -0400
+Processing by RoomsController#get_search_rooms as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8Uoh0M/fBCfMmfQ3+TghBMVYW6dB39x1M/Djn1Yt4YwonOlVo7gMLfIjlPJDTzeyxTDtemy5wq2LQk/e+enCyA==", "room"=>{"roomno"=>"", "building"=>"hunt", "size"=>"2", "status"=>"any", "date(1i)"=>"2016", "date(2i)"=>"9", "date(3i)"=>"25", "date(4i)"=>"01", "date(5i)"=>"00"}, "commit"=>"search room"}
+Redirected to http://0.0.0.0:3000/searchrooms
+Completed 302 Found in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/searchrooms" for 127.0.0.1 at 2016-09-25 01:02:35 -0400
+Processing by RoomsController#search_rooms as HTML
+  Rendering rooms/search_rooms.html.erb within layouts/application
+  Rendered rooms/_form.html.erb (10.7ms)
+  Rendered rooms/search_rooms.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 208ms (Views: 206.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/search_result" for 127.0.0.1 at 2016-09-25 01:02:39 -0400
+Processing by RoomsController#get_search_rooms as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"r2nYfupEmLrqD1t3cDgh9xT9ZKwC8MhyDU9BtmqTPe12vxD7hiOQsNS1O7LKTzdBFJXScS+W1qq1/e33xVceqQ==", "room"=>{"roomno"=>"", "building"=>"hunt", "size"=>"2", "status"=>"any", "date(1i)"=>"2016", "date(2i)"=>"9", "date(3i)"=>"25", "date(4i)"=>"02", "date(5i)"=>"00"}, "commit"=>"search room"}
+  [1m[36mRoom Load (0.4ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE (building = 'hunt' AND size = '2')[0m
+  [1m[36mBookedroom Load (0.3ms)[0m  [1m[34mSELECT "bookedrooms".* FROM "bookedrooms" WHERE (room_id=1234)[0m
+  [1m[36mBookedroom Load (0.4ms)[0m  [1m[34mSELECT "bookedrooms".* FROM "bookedrooms" WHERE (room_id=1234) AND (booking_time > '2016-09-25 00:00:00' and booking_time < '2016-09-25 04:00:00' )[0m
+  [1m[36mBookedroom Load (0.2ms)[0m  [1m[34mSELECT "bookedrooms".* FROM "bookedrooms" WHERE (room_id=1231)[0m
+  [1m[36mBookedroom Load (0.2ms)[0m  [1m[34mSELECT "bookedrooms".* FROM "bookedrooms" WHERE (room_id=1230)[0m
+  Rendering rooms/get_search_rooms.html.erb within layouts/application
+  [1m[36mBookedroom Load (0.3ms)[0m  [1m[34mSELECT  "bookedrooms".* FROM "bookedrooms" WHERE "bookedrooms"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "bookedrooms".* FROM "bookedrooms" WHERE "bookedrooms"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "bookedrooms".* FROM "bookedrooms" WHERE "bookedrooms"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  Rendered rooms/get_search_rooms.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 229ms (Views: 204.0ms | ActiveRecord: 1.8ms)
+
+
+Started POST "/search_result" for 127.0.0.1 at 2016-09-25 01:02:51 -0400
+Processing by RoomsController#get_search_rooms as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"r2nYfupEmLrqD1t3cDgh9xT9ZKwC8MhyDU9BtmqTPe12vxD7hiOQsNS1O7LKTzdBFJXScS+W1qq1/e33xVceqQ==", "room"=>{"roomno"=>"", "building"=>"hunt", "size"=>"2", "status"=>"any", "date(1i)"=>"2016", "date(2i)"=>"9", "date(3i)"=>"25", "date(4i)"=>"01", "date(5i)"=>"30"}, "commit"=>"search room"}
+  [1m[36mRoom Load (0.3ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE (building = 'hunt' AND size = '2')[0m
+  [1m[36mBookedroom Load (0.3ms)[0m  [1m[34mSELECT "bookedrooms".* FROM "bookedrooms" WHERE (room_id=1234)[0m
+  [1m[36mBookedroom Load (0.2ms)[0m  [1m[34mSELECT "bookedrooms".* FROM "bookedrooms" WHERE (room_id=1234) AND (booking_time > '2016-09-24 23:30:00' and booking_time < '2016-09-25 03:30:00' )[0m
+  [1m[36mBookedroom Load (0.3ms)[0m  [1m[34mSELECT "bookedrooms".* FROM "bookedrooms" WHERE (room_id=1231)[0m
+  [1m[36mBookedroom Load (0.4ms)[0m  [1m[34mSELECT "bookedrooms".* FROM "bookedrooms" WHERE (room_id=1230)[0m
+  Rendering rooms/get_search_rooms.html.erb within layouts/application
+  [1m[36mBookedroom Load (0.4ms)[0m  [1m[34mSELECT  "bookedrooms".* FROM "bookedrooms" WHERE "bookedrooms"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "bookedrooms".* FROM "bookedrooms" WHERE "bookedrooms"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "bookedrooms".* FROM "bookedrooms" WHERE "bookedrooms"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  Rendered rooms/get_search_rooms.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 208ms (Views: 194.5ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/bookroom/1234/2016-09-25%2001:30:00%20-0400" for 127.0.0.1 at 2016-09-25 01:02:54 -0400
+Processing by RoomsController#book_room as HTML
+  Parameters: {"id"=>"1234", "date"=>"2016-09-25 01:30:00 -0400"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "bookedrooms" ("user_id", "room_id", "booking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 1], ["room_id", 1234], ["booking_time", 2016-09-25 01:30:00 -0400], ["created_at", 2016-09-25 01:02:54 -0400], ["updated_at", 2016-09-25 01:02:54 -0400]]
+  [1m[35m (5.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://0.0.0.0:3000/userhome
+Completed 302 Found in 15ms (ActiveRecord: 6.3ms)
+
+
+Started GET "/userhome" for 127.0.0.1 at 2016-09-25 01:02:54 -0400
+Processing by UsersController#home as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/home.html.erb within layouts/application
+  Rendered users/_logout.html.erb (0.7ms)
+  Rendered users/home.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 315ms (Views: 308.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/searchrooms" for 127.0.0.1 at 2016-09-25 01:02:56 -0400
+Processing by RoomsController#search_rooms as HTML
+  Rendering rooms/search_rooms.html.erb within layouts/application
+  Rendered rooms/_form.html.erb (7.9ms)
+  Rendered rooms/search_rooms.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 220ms (Views: 218.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/search_result" for 127.0.0.1 at 2016-09-25 01:02:59 -0400
+Processing by RoomsController#get_search_rooms as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0rbV8S1or1Jp1Tph8f8FlHK5oW8or2E5gj7FWrXdpLYLYB10QQ+nWFdvWqRLiBMictEXsgXJf+E6jGkbGhmH8g==", "room"=>{"roomno"=>"", "building"=>"hunt", "size"=>"2", "status"=>"any", "date(1i)"=>"2016", "date(2i)"=>"9", "date(3i)"=>"25", "date(4i)"=>"02", "date(5i)"=>"00"}, "commit"=>"search room"}
+  [1m[36mRoom Load (0.4ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE (building = 'hunt' AND size = '2')[0m
+  [1m[36mBookedroom Load (0.4ms)[0m  [1m[34mSELECT "bookedrooms".* FROM "bookedrooms" WHERE (room_id=1234)[0m
+  [1m[36mBookedroom Load (0.3ms)[0m  [1m[34mSELECT "bookedrooms".* FROM "bookedrooms" WHERE (room_id=1234) AND (booking_time > '2016-09-25 00:00:00' and booking_time < '2016-09-25 04:00:00' )[0m
+  [1m[36mBookedroom Load (0.2ms)[0m  [1m[34mSELECT "bookedrooms".* FROM "bookedrooms" WHERE (room_id=1231)[0m
+  [1m[36mBookedroom Load (0.2ms)[0m  [1m[34mSELECT "bookedrooms".* FROM "bookedrooms" WHERE (room_id=1230)[0m
+  Rendering rooms/get_search_rooms.html.erb within layouts/application
+  [1m[36mBookedroom Load (0.3ms)[0m  [1m[34mSELECT  "bookedrooms".* FROM "bookedrooms" WHERE "bookedrooms"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "bookedrooms".* FROM "bookedrooms" WHERE "bookedrooms"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  Rendered rooms/get_search_rooms.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 212ms (Views: 198.0ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/userhome" for 127.0.0.1 at 2016-09-25 01:03:06 -0400
+Processing by UsersController#home as HTML
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/home.html.erb within layouts/application
+  Rendered users/_logout.html.erb (0.7ms)
+  Rendered users/home.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 193ms (Views: 188.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/activerooms" for 127.0.0.1 at 2016-09-25 01:03:08 -0400
+Processing by BookedroomsController#get_active_rooms as HTML
+  Rendering bookedrooms/get_active_rooms.html.erb within layouts/application
+  [1m[36mBookedroom Load (0.2ms)[0m  [1m[34mSELECT "bookedrooms".* FROM "bookedrooms" WHERE (user_id=1)[0m
+  [1m[36mRoom Load (0.2ms)[0m  [1m[34mSELECT  "rooms".* FROM "rooms" WHERE (roomno = 1234) LIMIT ?[0m  [["LIMIT", 1]]
+  Rendered bookedrooms/get_active_rooms.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 182ms (Views: 178.9ms | ActiveRecord: 0.5ms)
+
+
+  [1m[36mBookedroom Load (3.4ms)[0m  [1m[34mSELECT "bookedrooms".* FROM "bookedrooms" WHERE (booking_time='2016-09-25 01:30:00')[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (20.4ms)[0m  [1m[31mDELETE FROM "bookedrooms" WHERE "bookedrooms"."id" = ?[0m  [["id", 3]]
+  [1m[35m (34.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBookedroom Load (6.3ms)[0m  [1m[34mSELECT "bookedrooms".* FROM "bookedrooms" WHERE (booking_time='2016-09-25 02:01:00')[0m
+  [1m[36mBookedroom Load (3.4ms)[0m  [1m[34mSELECT "bookedrooms".* FROM "bookedrooms" WHERE (booking_time='2016-09-25 11:00:00')[0m
+  [1m[36mBookedroom Load (2.4ms)[0m  [1m[34mSELECT "bookedrooms".* FROM "bookedrooms" WHERE (booking_time='2016-09-25 11:30:00')[0m
+  [1m[36mBookedroom Load (3.3ms)[0m  [1m[34mSELECT "bookedrooms".* FROM "bookedrooms" WHERE (booking_time='2016-09-25 12:00:00')[0m

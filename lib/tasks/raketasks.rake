@@ -3,7 +3,7 @@ namespace :raketasks do
   task deleteOldRecords: :environment do
     puts "in rake task"
     #current_time = Time.new
-    Bookedroom.where(:booking_time=>Time.now.beginning_of_minute).destroy_all
+    Bookedroom.where(:booking_time=>Time.now.beginning_of_hour-(1.0/24)).destroy_all
   end
 
 end
