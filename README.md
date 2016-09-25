@@ -1,10 +1,11 @@
 # README
 # Library Room Booking System
 
-
 The library booking service allows users to explore available rooms and book as per their convenience. The admins have a separate Login portal from where they can control the application system.
 
 The application was developed using Ruby 2.2.0, Rails 5 and ActiveAdmin Gem. The deployed application is on Heroku https://library-booking-system-rails.herokuapp.com/
+
+To Test the application on Heroku, create a new user account and use the existing Admin account available in 'seeds.rb'
 
 DB Details =>
 Development - SQLite:
