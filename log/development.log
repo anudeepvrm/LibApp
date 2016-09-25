@@ -1375,3 +1375,78 @@ Processing by UsersController#home as HTML
 Completed 200 OK in 221ms (Views: 215.1ms | ActiveRecord: 2.2ms)
 
 
+Started GET "/userhome" for 127.0.0.1 at 2016-09-25 00:44:47 -0400
+Processing by UsersController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/home.html.erb within layouts/application
+  Rendered users/_logout.html.erb (1.4ms)
+  Rendered users/home.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 218ms (Views: 212.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/searchrooms" for 127.0.0.1 at 2016-09-25 00:44:52 -0400
+Processing by RoomsController#search_rooms as HTML
+  Rendering rooms/search_rooms.html.erb within layouts/application
+  Rendered rooms/_form.html.erb (12.7ms)
+  Rendered rooms/search_rooms.html.erb within layouts/application (15.5ms)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (no implicit conversion of Time into Integer):
+    34: 
+    35:     <div class="field">
+    36:       <%= f.label :date %>
+    37:       <%= f.datetime_select(:date,:default=>{:hour => Time.now+3600},:start_year => Time.now.year,minute_step: 30) %>
+    38:     </div>
+    39: 
+    40: 
+  
+app/views/rooms/_form.html.erb:37:in `block in _app_views_rooms__form_html_erb___183267485648217878_70354117144060'
+app/views/rooms/_form.html.erb:1:in `_app_views_rooms__form_html_erb___183267485648217878_70354117144060'
+app/views/rooms/search_rooms.html.erb:5:in `_app_views_rooms_search_rooms_html_erb___3470965932760572146_70354117483620'
+  Rendering /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (17.8ms)
+  Rendering /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.4ms)
+  Rendering /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (52.7ms)
+Started GET "/searchrooms" for 127.0.0.1 at 2016-09-25 00:46:58 -0400
+Processing by RoomsController#search_rooms as HTML
+  Rendering rooms/search_rooms.html.erb within layouts/application
+  Rendered rooms/_form.html.erb (5.3ms)
+  Rendered rooms/search_rooms.html.erb within layouts/application (7.7ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `end_of_hour' for 0:Fixnum):
+    34: 
+    35:     <div class="field">
+    36:       <%= f.label :date %>
+    37:       <%= f.datetime_select(:date,:default=>{:hour => Time.now.hour.end_of_hour},:start_year => Time.now.year,minute_step: 30) %>
+    38:     </div>
+    39: 
+    40: 
+  
+app/views/rooms/_form.html.erb:37:in `block in _app_views_rooms__form_html_erb___183267485648217878_70354115392740'
+app/views/rooms/_form.html.erb:1:in `_app_views_rooms__form_html_erb___183267485648217878_70354115392740'
+app/views/rooms/search_rooms.html.erb:5:in `_app_views_rooms_search_rooms_html_erb___3470965932760572146_70353914192340'
+  Rendering /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (15.8ms)
+  Rendering /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.0ms)
+  Rendering /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (55.4ms)
+Started GET "/searchrooms" for 127.0.0.1 at 2016-09-25 00:47:23 -0400
+Processing by RoomsController#search_rooms as HTML
+  Rendering rooms/search_rooms.html.erb within layouts/application
+  Rendered rooms/_form.html.erb (9.1ms)
+  Rendered rooms/search_rooms.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 231ms (Views: 228.9ms | ActiveRecord: 0.0ms)
+
+
