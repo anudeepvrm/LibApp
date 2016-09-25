@@ -15,6 +15,10 @@
   <% @rooms.each do |bookedroom| %>
       <tr>
         <%@temp_room=Room.where("roomno = ?",bookedroom.room_id).take%>
+        <%if @temp_room.blank?%>
+            <%bookedroom.destroy%>
+            <%next%>
+            <%end%>
 
         <td><%= bookedroom.room_id %></td>
         <td><%= @temp_room.building %></td>
