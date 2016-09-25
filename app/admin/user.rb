@@ -1,5 +1,6 @@
 ActiveAdmin.register User do
 
+  permit_params :name, :email, :password
   show do
     attributes_table do
       row :id
@@ -17,12 +18,15 @@ index do
 end
 
   form do |f|
-    f.inputs "Admin Details" do
+    f.inputs "User Details" do
+      f.input :name
       f.input :email
       f.input :password
-      f.input :password_confirmation
     end
     f.actions
   end
+
+
+
 
 end
