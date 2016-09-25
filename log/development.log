@@ -1608,3 +1608,330 @@ Completed 200 OK in 182ms (Views: 178.9ms | ActiveRecord: 0.5ms)
   [1m[36mBookedroom Load (3.4ms)[0m  [1m[34mSELECT "bookedrooms".* FROM "bookedrooms" WHERE (booking_time='2016-09-25 11:00:00')[0m
   [1m[36mBookedroom Load (2.4ms)[0m  [1m[34mSELECT "bookedrooms".* FROM "bookedrooms" WHERE (booking_time='2016-09-25 11:30:00')[0m
   [1m[36mBookedroom Load (3.3ms)[0m  [1m[34mSELECT "bookedrooms".* FROM "bookedrooms" WHERE (booking_time='2016-09-25 12:00:00')[0m
+Started GET "/" for 127.0.0.1 at 2016-09-25 12:24:38 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MainController#index as HTML
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 6770ms (Views: 6746.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user_login" for 127.0.0.1 at 2016-09-25 12:24:51 -0400
+Processing by UsersController#login as HTML
+  Rendering users/login.html.erb within layouts/application
+  Rendered users/_loginform.html.erb (36.7ms)
+  Rendered users/login.html.erb within layouts/application (38.9ms)
+Completed 200 OK in 454ms (Views: 426.2ms | ActiveRecord: 2.7ms)
+
+
+Started POST "/validatelogin" for 127.0.0.1 at 2016-09-25 12:24:53 -0400
+Processing by UsersController#validatelogin as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"a1KJrk9JxDnh6yxV7oypQIkFFzisgwR5K1+Xvxxg/LiyhEErIy7MM99RTJBU+7/2iW2h5YHlGqGT7Tv+s6Tf/A==", "user"=>{"email"=>"anudeepvrm@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "anudeepvrm@gmail.com"], ["LIMIT", 1]]
+Redirected to http://0.0.0.0:3000/userhome
+Completed 302 Found in 12ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/userhome" for 127.0.0.1 at 2016-09-25 12:24:53 -0400
+Processing by UsersController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/home.html.erb within layouts/application
+  Rendered users/_logout.html.erb (0.7ms)
+  Rendered users/home.html.erb within layouts/application (19.8ms)
+Completed 200 OK in 470ms (Views: 466.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/searchrooms" for 127.0.0.1 at 2016-09-25 12:25:02 -0400
+Processing by RoomsController#search_rooms as HTML
+  Rendering rooms/search_rooms.html.erb within layouts/application
+  Rendered rooms/_form.html.erb (15.6ms)
+  Rendered rooms/search_rooms.html.erb within layouts/application (19.1ms)
+Completed 500 Internal Server Error in 39ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (step can't be 0):
+    34: 
+    35:     <div class="field">
+    36:       <%= f.label :date %>
+    37:       <%= f.datetime_select(:date,:default=>Time.now.end_of_hour,:start_year => Time.now.year,minute_step: 00) %>
+    38:     </div>
+    39: 
+    40: 
+  
+app/views/rooms/_form.html.erb:37:in `block in _app_views_rooms__form_html_erb__227227612022641016_70038266933220'
+app/views/rooms/_form.html.erb:1:in `_app_views_rooms__form_html_erb__227227612022641016_70038266933220'
+app/views/rooms/search_rooms.html.erb:5:in `_app_views_rooms_search_rooms_html_erb___1353740047915425165_70038266858040'
+  Rendering /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (72.8ms)
+  Rendering /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (42.8ms)
+  Rendering /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (18.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (240.6ms)
+Started GET "/userhome" for 127.0.0.1 at 2016-09-25 12:25:33 -0400
+Processing by UsersController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/home.html.erb within layouts/application
+  Rendered users/_logout.html.erb (0.5ms)
+  Rendered users/home.html.erb within layouts/application (21.1ms)
+Completed 200 OK in 209ms (Views: 205.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/activerooms" for 127.0.0.1 at 2016-09-25 12:25:36 -0400
+Processing by BookedroomsController#get_active_rooms as HTML
+  Rendering bookedrooms/get_active_rooms.html.erb within layouts/application
+  [1m[36mBookedroom Load (0.3ms)[0m  [1m[34mSELECT "bookedrooms".* FROM "bookedrooms" WHERE (user_id=1)[0m
+  Rendered bookedrooms/get_active_rooms.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 196ms (Views: 191.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/userhome" for 127.0.0.1 at 2016-09-25 12:25:37 -0400
+Processing by UsersController#home as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/home.html.erb within layouts/application
+  Rendered users/_logout.html.erb (0.5ms)
+  Rendered users/home.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 187ms (Views: 182.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/searchrooms" for 127.0.0.1 at 2016-09-25 12:25:39 -0400
+Processing by RoomsController#search_rooms as HTML
+  Rendering rooms/search_rooms.html.erb within layouts/application
+  Rendered rooms/_form.html.erb (8.6ms)
+  Rendered rooms/search_rooms.html.erb within layouts/application (26.9ms)
+Completed 200 OK in 201ms (Views: 198.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/search_result" for 127.0.0.1 at 2016-09-25 12:25:50 -0400
+Processing by RoomsController#get_search_rooms as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kYO357zWqjfBTNa9gs9fCtvKtKKMeex0Pe0EtzzIoLJIVX9i0LGiPf/2tng4uEm826ICf6Ef8qyFX6j2kwyD9g==", "room"=>{"roomno"=>"", "building"=>"hunt", "size"=>"2", "status"=>"any", "date(1i)"=>"2016", "date(2i)"=>"9", "date(3i)"=>"25", "date(4i)"=>"12", "date(5i)"=>"59"}, "commit"=>"search room"}
+  [1m[36mRoom Load (0.8ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE (building = 'hunt' AND size = '2')[0m
+  [1m[36mBookedroom Load (0.4ms)[0m  [1m[34mSELECT "bookedrooms".* FROM "bookedrooms" WHERE (room_id=1234)[0m
+  [1m[36mBookedroom Load (0.2ms)[0m  [1m[34mSELECT "bookedrooms".* FROM "bookedrooms" WHERE (room_id=1234) AND (booking_time > '2016-09-25 10:59:00' and booking_time < '2016-09-25 14:59:00' )[0m
+  [1m[36mBookedroom Load (0.1ms)[0m  [1m[34mSELECT "bookedrooms".* FROM "bookedrooms" WHERE (room_id=1231)[0m
+  [1m[36mBookedroom Load (0.1ms)[0m  [1m[34mSELECT "bookedrooms".* FROM "bookedrooms" WHERE (room_id=1230)[0m
+  Rendering rooms/get_search_rooms.html.erb within layouts/application
+  [1m[36mBookedroom Load (0.2ms)[0m  [1m[34mSELECT  "bookedrooms".* FROM "bookedrooms" WHERE "bookedrooms"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "bookedrooms".* FROM "bookedrooms" WHERE "bookedrooms"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "bookedrooms".* FROM "bookedrooms" WHERE "bookedrooms"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  Rendered rooms/get_search_rooms.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 330ms (Views: 305.4ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/bookroom/1234/2016-09-25%2012:59:00%20-0400" for 127.0.0.1 at 2016-09-25 12:25:55 -0400
+Processing by RoomsController#book_room as HTML
+  Parameters: {"id"=>"1234", "date"=>"2016-09-25 12:59:00 -0400"}
+  [1m[35m (0.7ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (3.2ms)[0m  [1m[32mINSERT INTO "bookedrooms" ("user_id", "room_id", "booking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 1], ["room_id", 1234], ["booking_time", 2016-09-25 12:59:00 -0400], ["created_at", 2016-09-25 12:25:55 -0400], ["updated_at", 2016-09-25 12:25:55 -0400]]
+  [1m[35m (15.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://0.0.0.0:3000/userhome
+Completed 302 Found in 28ms (ActiveRecord: 19.4ms)
+
+
+Started GET "/userhome" for 127.0.0.1 at 2016-09-25 12:25:55 -0400
+Processing by UsersController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/home.html.erb within layouts/application
+  Rendered users/_logout.html.erb (1.1ms)
+  Rendered users/home.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 244ms (Views: 240.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/activerooms" for 127.0.0.1 at 2016-09-25 12:25:57 -0400
+Processing by BookedroomsController#get_active_rooms as HTML
+  Rendering bookedrooms/get_active_rooms.html.erb within layouts/application
+  [1m[36mBookedroom Load (0.2ms)[0m  [1m[34mSELECT "bookedrooms".* FROM "bookedrooms" WHERE (user_id=1)[0m
+  [1m[36mRoom Load (0.2ms)[0m  [1m[34mSELECT  "rooms".* FROM "rooms" WHERE (roomno = 1234) LIMIT ?[0m  [["LIMIT", 1]]
+  Rendered bookedrooms/get_active_rooms.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 182ms (Views: 179.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/userhome" for 127.0.0.1 at 2016-09-25 12:26:01 -0400
+Processing by UsersController#home as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/home.html.erb within layouts/application
+  Rendered users/_logout.html.erb (0.8ms)
+  Rendered users/home.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 212ms (Views: 207.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/userhome" for 127.0.0.1 at 2016-09-25 12:26:34 -0400
+Processing by UsersController#home as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/home.html.erb within layouts/application
+  Rendered users/_logout.html.erb (0.9ms)
+  Rendered users/home.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 201ms (Views: 197.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/searchrooms" for 127.0.0.1 at 2016-09-25 12:26:36 -0400
+Processing by RoomsController#search_rooms as HTML
+  Rendering rooms/search_rooms.html.erb within layouts/application
+  Rendered rooms/_form.html.erb (10.8ms)
+  Rendered rooms/search_rooms.html.erb within layouts/application (12.7ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (step can't be 0):
+    34: 
+    35:     <div class="field">
+    36:       <%= f.label :date %>
+    37:       <%= f.datetime_select(:date,:default=>Time.now.end_of_hour,:start_year => Time.now.year,minute_step: 0) %>
+    38:     </div>
+    39: 
+    40: 
+  
+app/views/rooms/_form.html.erb:37:in `block in _app_views_rooms__form_html_erb__227227612022641016_52341800'
+app/views/rooms/_form.html.erb:1:in `_app_views_rooms__form_html_erb__227227612022641016_52341800'
+app/views/rooms/search_rooms.html.erb:5:in `_app_views_rooms_search_rooms_html_erb___1353740047915425165_52402180'
+  Rendering /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (11.7ms)
+  Rendering /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.5ms)
+  Rendering /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (47.6ms)
+  [1m[36mBookedroom Load (1.9ms)[0m  [1m[34mSELECT "bookedrooms".* FROM "bookedrooms" WHERE (booking_time='2016-09-25 12:33:00')[0m
+Started GET "/searchrooms" for 127.0.0.1 at 2016-09-25 12:33:44 -0400
+Processing by RoomsController#search_rooms as HTML
+  Rendering rooms/search_rooms.html.erb within layouts/application
+  Rendered rooms/_form.html.erb (9.1ms)
+  Rendered rooms/search_rooms.html.erb within layouts/application (13.5ms)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (step can't be 0):
+    34: 
+    35:     <div class="field">
+    36:       <%= f.label :date %>
+    37:       <%= f.datetime_select(:date,:default=>Time.now.end_of_hour,:start_year => Time.now.year,:minute_step=>00) %>
+    38:     </div>
+    39: 
+    40: 
+  
+app/views/rooms/_form.html.erb:37:in `block in _app_views_rooms__form_html_erb__227227612022641016_70038204788640'
+app/views/rooms/_form.html.erb:1:in `_app_views_rooms__form_html_erb__227227612022641016_70038204788640'
+app/views/rooms/search_rooms.html.erb:5:in `_app_views_rooms_search_rooms_html_erb___1353740047915425165_70038204940120'
+  Rendering /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (19.5ms)
+  Rendering /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.9ms)
+  Rendering /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (57.1ms)
+Started GET "/searchrooms" for 127.0.0.1 at 2016-09-25 12:33:55 -0400
+Processing by RoomsController#search_rooms as HTML
+  Rendering rooms/search_rooms.html.erb within layouts/application
+  Rendered rooms/_form.html.erb (15.9ms)
+  Rendered rooms/search_rooms.html.erb within layouts/application (23.8ms)
+Completed 200 OK in 297ms (Views: 293.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/searchrooms" for 127.0.0.1 at 2016-09-25 12:34:24 -0400
+Processing by RoomsController#search_rooms as HTML
+  Rendering rooms/search_rooms.html.erb within layouts/application
+  Rendered rooms/_form.html.erb (8.5ms)
+  Rendered rooms/search_rooms.html.erb within layouts/application (11.2ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `hours' for 2016-09-25 12:34:25 -0400:Time):
+    34: 
+    35:     <div class="field">
+    36:       <%= f.label :date %>
+    37:       <%= f.datetime_select(:date,:default=>((Time.now)+1).hours.end_of_hour,:start_year => Time.now.year,:minute_step=>60) %>
+    38:     </div>
+    39: 
+    40: 
+  
+app/views/rooms/_form.html.erb:37:in `block in _app_views_rooms__form_html_erb__227227612022641016_70038270564360'
+app/views/rooms/_form.html.erb:1:in `_app_views_rooms__form_html_erb__227227612022641016_70038270564360'
+app/views/rooms/search_rooms.html.erb:5:in `_app_views_rooms_search_rooms_html_erb___1353740047915425165_70038272370720'
+  Rendering /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (29.8ms)
+  Rendering /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (8.0ms)
+  Rendering /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (85.4ms)
+Started GET "/searchrooms" for 127.0.0.1 at 2016-09-25 12:34:39 -0400
+Processing by RoomsController#search_rooms as HTML
+  Rendering rooms/search_rooms.html.erb within layouts/application
+  Rendered rooms/_form.html.erb (13.1ms)
+  Rendered rooms/search_rooms.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 264ms (Views: 262.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-09-25 12:34:45 -0400
+Processing by MainController#index as HTML
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 212ms (Views: 210.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user_login" for 127.0.0.1 at 2016-09-25 12:34:46 -0400
+Processing by UsersController#login as HTML
+  Rendering users/login.html.erb within layouts/application
+  Rendered users/_loginform.html.erb (5.8ms)
+  Rendered users/login.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 252ms (Views: 249.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/validatelogin" for 127.0.0.1 at 2016-09-25 12:34:48 -0400
+Processing by UsersController#validatelogin as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Q+L1aCMnYQta6mbLO1MZMFMwTD1J+xm6WOS+BJlrSrmaND3tT0BpAWRQBg6BJA+GU1j64GSdB2LgVhJFNq9p/Q==", "user"=>{"email"=>"anudeepvrm@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "anudeepvrm@gmail.com"], ["LIMIT", 1]]
+Redirected to http://0.0.0.0:3000/userhome
+Completed 302 Found in 5ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/userhome" for 127.0.0.1 at 2016-09-25 12:34:48 -0400
+Processing by UsersController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/home.html.erb within layouts/application
+  Rendered users/_logout.html.erb (1.0ms)
+  Rendered users/home.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 240ms (Views: 236.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/searchrooms" for 127.0.0.1 at 2016-09-25 12:34:50 -0400
+Processing by RoomsController#search_rooms as HTML
+  Rendering rooms/search_rooms.html.erb within layouts/application
+  Rendered rooms/_form.html.erb (9.2ms)
+  Rendered rooms/search_rooms.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 255ms (Views: 253.4ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mBookedroom Load (3.4ms)[0m  [1m[34mSELECT "bookedrooms".* FROM "bookedrooms" WHERE (booking_time='2016-09-25 14:30:00')[0m
+Started GET "/searchrooms" for 127.0.0.1 at 2016-09-25 14:34:26 -0400
+Processing by RoomsController#search_rooms as HTML
+  Rendering rooms/search_rooms.html.erb within layouts/application
+  Rendered rooms/_form.html.erb (12.5ms)
+  Rendered rooms/search_rooms.html.erb within layouts/application (14.6ms)
+Completed 200 OK in 218ms (Views: 216.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/searchrooms" for 127.0.0.1 at 2016-09-25 14:34:32 -0400
+Processing by RoomsController#search_rooms as HTML
+  Rendering rooms/search_rooms.html.erb within layouts/application
+  Rendered rooms/_form.html.erb (8.9ms)
+  Rendered rooms/search_rooms.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 235ms (Views: 233.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/searchrooms" for 127.0.0.1 at 2016-09-25 14:36:06 -0400
+Processing by RoomsController#search_rooms as HTML
+  Rendering rooms/search_rooms.html.erb within layouts/application
+  Rendered rooms/_form.html.erb (192.7ms)
+  Rendered rooms/search_rooms.html.erb within layouts/application (214.3ms)
+Completed 200 OK in 667ms (Views: 624.7ms | ActiveRecord: 0.0ms)
+
+

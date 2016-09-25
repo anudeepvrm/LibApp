@@ -18,7 +18,7 @@
 
   <div class="field">
     <%= f.label :building %>
-    <%=f.select :building, [['J.Hunt','hunt'],['DHL','dhl']]%>
+    <%=f.select :building, [['James.B.Hunt','James.B.Hunt'],['D.H.Hill','D.H.Hill']]%>
 
   </div>
 
@@ -34,7 +34,7 @@
 
     <div class="field">
       <%= f.label :date %>
-      <%= f.datetime_select(:date,:default=>Time.now.end_of_hour,:start_year => Time.now.year,minute_step: 30) %>
+      <%= f.datetime_select(:date,:default=>((Time.now)+1.hours).end_of_hour,:start_year => Time.now.year,:minute_step=>60) %>
     </div>
 
 
