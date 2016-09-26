@@ -6,6 +6,7 @@ The library booking service allows users to explore available rooms and book as 
 The application was developed using Ruby 2.2.0, Rails 5 and ActiveAdmin Gem. The deployed application is on Heroku https://library-booking-system-rails.herokuapp.com/
 
 To Test the application on Heroku, create a new user account and use the existing Admin account available in 'seeds.rb'
+username: admin@example.com, password: password
 
 The rooms and email have validation for unique, so most of them are commented out to prevent error while initializing db. However the production db on Heroku has values initialized. 
 
