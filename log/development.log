@@ -2339,3 +2339,30 @@ Processing by MainController#index as HTML
 Completed 200 OK in 220932ms (Views: 220887.8ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/admin_ui" for ::1 at 2016-09-25 23:38:05 -0400
+Processing by AdminUi::DashboardController#index as HTML
+Completed 401 Unauthorized in 35ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admin_ui/login" for ::1 at 2016-09-25 23:38:05 -0400
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  Rendering C:/Ruby22-x64/lib/ruby/gems/2.2.0/bundler/gems/active_admin-f8926831429f/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/bundler/gems/active_admin-f8926831429f/app/views/active_admin/devise/shared/_links.erb (5.0ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/bundler/gems/active_admin-f8926831429f/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (962.5ms)
+Completed 200 OK in 3658ms (Views: 3554.0ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/" for ::1 at 2016-09-25 23:42:34 -0400
+Processing by MainController#index as HTML
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 2208ms (Views: 2162.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-09-25 23:53:52 -0400
+Processing by MainController#index as HTML
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (41.0ms)
+Completed 200 OK in 3102ms (Views: 3026.4ms | ActiveRecord: 0.0ms)
+
+
