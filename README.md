@@ -20,7 +20,6 @@ http://docs.railsbridge.org/intro-to-rails/deploying_to_heroku
 A cron job (Heroku Schedular) runs on Heroku to delete expired rooms. A cron job using 'Whenever' Gem is also available (schedular.rb) to run the task on local or EC2.
 Start a cron task on Heroku Schedular by using the command #'rake raketasks:deleteOldRecords'
 
-NOTE: Few features of ADMIN are still in progress, fell free to explore as a User.
 
 NOTE: 
 A user can book a 2 hour slot but he can't book at any arbitrary time. For example, a user can book a slot at 1am-3am or 2am-4am. He is not allowed to book a room from 2:13am-4:13am. 
@@ -30,3 +29,4 @@ After 2 hours, the booked room will be deleted from active rooms and moved to Bo
 User can have only one active booking, the book link will be disabled until he/she cancels the room, slot expires or the admin deletes the room
 Admin can delete a room that is already booked by a user. It will be removed from active rooms section of the user and moved to booking history.
 
+Next Release: More admin features to be added.
