@@ -2,7 +2,7 @@ ActiveAdmin.register Room do
 
   permit_params :roomno, :building, :size, :status,:date
   index do
-    column :roomno
+    column "Room Number",:roomno
     column :building
     column :status
     column :size
