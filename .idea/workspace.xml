@@ -2,10 +2,38 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="299d7600-7f26-4657-804c-1a6bb603b04d" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/pids/server.pid" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/development.sqlite3" afterPath="$PROJECT_DIR$/db/development.sqlite3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/4u/4uKPNU6OE2246v97WL9oo_NHag92vcugYgm4xM6keps.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/4u/4uKPNU6OE2246v97WL9oo_NHag92vcugYgm4xM6keps.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/6U/6UH0a2FltBDLEXZPs0o0YXccURXTxxP5td-p1GHKRBI.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/6U/6UH0a2FltBDLEXZPs0o0YXccURXTxxP5td-p1GHKRBI.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/6m/6mD3LK7-NrabhNmMSSVjTZH_73HnZcUfZOvlXWw3eA0.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/6m/6mD3LK7-NrabhNmMSSVjTZH_73HnZcUfZOvlXWw3eA0.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/9M/9M1wqSwq7SJNRvCqGPqSL_T8cS3xSTVvO_pIROXZiRA.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/9M/9M1wqSwq7SJNRvCqGPqSL_T8cS3xSTVvO_pIROXZiRA.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/F8/F8rpeEvXW0nHfHehOAr467JPnfwTmvDbJkWIu_NlfoQ.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/F8/F8rpeEvXW0nHfHehOAr467JPnfwTmvDbJkWIu_NlfoQ.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/FE/FecMI4YpYyToMiv2TrOhUDx4l0aKCmn5UMpMpKfUzWY.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/FE/FecMI4YpYyToMiv2TrOhUDx4l0aKCmn5UMpMpKfUzWY.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/Hx/HXSdR229HbLezze-v4dUqi078qclHSBFe_AjEPdSelU.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/Hx/HXSdR229HbLezze-v4dUqi078qclHSBFe_AjEPdSelU.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/IW/iWnllmbEFN5hMP50RpxrHWw_f856GsIlebMeGA3iIcE.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/IW/iWnllmbEFN5hMP50RpxrHWw_f856GsIlebMeGA3iIcE.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/Kk/Kk9Dtvn3QzktJqPE0et58NzR5hkBXIg1mxgOu5zLsCs.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/Kk/Kk9Dtvn3QzktJqPE0et58NzR5hkBXIg1mxgOu5zLsCs.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/Kt/Kt1Zxokou8V25JlZalzRv5kWZ8gpz097Y5avxCIjQ-0.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/Kt/Kt1Zxokou8V25JlZalzRv5kWZ8gpz097Y5avxCIjQ-0.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/UX/uXBybRHRByW1xEgq4-sujqX4qAXfZ1mfXf7wVxO_-1U.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/UX/uXBybRHRByW1xEgq4-sujqX4qAXfZ1mfXf7wVxO_-1U.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/Vb/VbGWmDj0f0Pk4fKcW1gdyCyDpGRdXLu0RIQygIMkmzM.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/Vb/VbGWmDj0f0Pk4fKcW1gdyCyDpGRdXLu0RIQygIMkmzM.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/X-/X-to3wX1j1mxeQOIs2ULxqbceUaPeOIWXmL2k5W8Zdo.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/X-/X-to3wX1j1mxeQOIs2ULxqbceUaPeOIWXmL2k5W8Zdo.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/Yq/yqnNWUA-m8EVpABru8LDP86daW2dAfvCUEPKIvGL6gY.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/Yq/yqnNWUA-m8EVpABru8LDP86daW2dAfvCUEPKIvGL6gY.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/aG/aGmO70CCqTx-DCSW2nzORF4SD5Bt3mdeeqYmJwRdIRg.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/aG/aGmO70CCqTx-DCSW2nzORF4SD5Bt3mdeeqYmJwRdIRg.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/cl/cljvEKvTcmcMRbc9RsJiOEn8zMzwM0tlgD_KfVHrsjY.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/cl/cljvEKvTcmcMRbc9RsJiOEn8zMzwM0tlgD_KfVHrsjY.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/e_/e_ExUBol42J3PlvYxAjC1J4dCzoHelAX6EQkY1lZSkY.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/e_/e_ExUBol42J3PlvYxAjC1J4dCzoHelAX6EQkY1lZSkY.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/h4/h4kI04jO5gehHMaOn6PC_00_h3nkk0N8xgT_IwnuP-A.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/h4/h4kI04jO5gehHMaOn6PC_00_h3nkk0N8xgT_IwnuP-A.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/hD/hDAjoCWuS4lGNsbjKikR0SOJ-bA_IvUdMO1Cu520YJ8.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/hD/hDAjoCWuS4lGNsbjKikR0SOJ-bA_IvUdMO1Cu520YJ8.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/lC/lccz6mLpuzfUoFl_A2XGMeHy7sc85Grmn_UQmpTH9DQ.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/lC/lccz6mLpuzfUoFl_A2XGMeHy7sc85Grmn_UQmpTH9DQ.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/m_/m_cGfEnR0IcKm5zb1ewb9-OCcGF6wsJSQZf2ewXc8A0.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/m_/m_cGfEnR0IcKm5zb1ewb9-OCcGF6wsJSQZf2ewXc8A0.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/oq/OqlVilkxaRLJ8ob9Fsfn6lyYAt1BMz6cwl0MDb6mT4A.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/oq/OqlVilkxaRLJ8ob9Fsfn6lyYAt1BMz6cwl0MDb6mT4A.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/qN/Qngd7EbCFqFSDDT50xZ8ANUlnrCeR7xMz7cTICKIwes.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/qN/Qngd7EbCFqFSDDT50xZ8ANUlnrCeR7xMz7cTICKIwes.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/uD/uDjrqG4H6HYjIdOK8fulFtkCZnekabINI9n0v5_6YwU.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/uD/uDjrqG4H6HYjIdOK8fulFtkCZnekabINI9n0v5_6YwU.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/v2/v2AiJkAdAzbHpmPqSE8o0aE6qe9IDjALO3vbk_xZnT4.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/v2/v2AiJkAdAzbHpmPqSE8o0aE6qe9IDjALO3vbk_xZnT4.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/wb/wbw6Qv0WPaDiAbr2m4HZOqQtNBWqIwy69jrbOmvfpgc.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/wb/wbw6Qv0WPaDiAbr2m4HZOqQtNBWqIwy69jrbOmvfpgc.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/LibApp.iml" afterPath="$PROJECT_DIR$/.idea/LibApp.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/admin/bookedroom.rb" afterPath="$PROJECT_DIR$/app/admin/bookedroom.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/development.log" afterPath="$PROJECT_DIR$/log/development.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/models/user_test.rb" afterPath="$PROJECT_DIR$/test/models/user_test.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/pids/server.pid" afterPath="$PROJECT_DIR$/tmp/pids/server.pid" />
     </list>
     <ignored path="LibraryApp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -18,8 +46,8 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/LibApp@Development__LibApp.coverage" NAME="Development: LibApp Coverage Results" MODIFIED="1475716756195" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LibApp" />
     <SUITE FILE_PATH="coverage/LibApp@Development__LibraryApp.coverage" NAME="Development: LibraryApp Coverage Results" MODIFIED="1474591707555" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LibraryApp" />
-    <SUITE FILE_PATH="coverage/LibApp@Development__LibApp.coverage" NAME="Development: LibApp Coverage Results" MODIFIED="1474764752792" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LibApp" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -50,53 +78,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="index.html.erb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/main/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="17">
               <caret line="1" column="22" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
-              <folding>
-                <element signature="n#style#0;n#h1#0;n#body#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="user_test.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/models/user_test.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="731">
-              <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="seeds.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/db/seeds.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="schema.rb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="schema.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/db/schema.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bookedroom.rb" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/admin/bookedroom.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="16" column="24" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -130,13 +136,13 @@
         <option value="$PROJECT_DIR$/app/views/rooms/_form.html.erb" />
         <option value="$PROJECT_DIR$/app/models/bookedroom.rb" />
         <option value="$PROJECT_DIR$/app/models/room.rb" />
-        <option value="$PROJECT_DIR$/app/admin/bookedroom.rb" />
         <option value="$PROJECT_DIR$/app/admin/user.rb" />
         <option value="$PROJECT_DIR$/app/models/user.rb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/application.css" />
         <option value="$PROJECT_DIR$/app/admin/room.rb" />
         <option value="$PROJECT_DIR$/app/views/main/index.html.erb" />
         <option value="$PROJECT_DIR$/test/models/user_test.rb" />
+        <option value="$PROJECT_DIR$/app/admin/bookedroom.rb" />
       </list>
     </option>
   </component>
@@ -184,8 +190,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -336,8 +340,28 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LibApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LibApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="RailsProjectView" />
     </panes>
   </component>
@@ -502,11 +526,12 @@
       <workItem from="1474743617206" duration="18073000" />
       <workItem from="1474764643356" duration="9176000" />
       <workItem from="1474860143575" duration="4228000" />
+      <workItem from="1475716407137" duration="1000000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50497000" />
+    <option name="totallyTimeSpent" value="51497000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -521,24 +546,24 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27836612" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28290468" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32961783" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21507065" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32496077" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32496077" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32961783" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21507065" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -705,7 +730,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -797,7 +821,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1241">
           <caret line="73" column="22" selection-start-line="73" selection-start-column="22" selection-end-line="73" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -813,7 +836,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="969">
           <caret line="57" column="10" selection-start-line="57" selection-start-column="8" selection-end-line="57" selection-end-column="10" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -821,7 +843,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1989">
           <caret line="117" column="59" selection-start-line="117" selection-start-column="35" selection-end-line="117" selection-end-column="59" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -849,14 +870,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/admin/bookedroom.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/admin/room.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -867,7 +880,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
+        <state relative-caret-position="374">
           <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
           <folding />
         </state>
@@ -877,9 +890,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="22" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
-          <folding>
-            <element signature="n#style#0;n#h1#0;n#body#0;n#!!top" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -891,6 +902,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/db/development.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/db/seeds.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -899,7 +917,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db/development.log">
+    <entry file="file://$PROJECT_DIR$/db/schema.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -907,10 +925,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db/schema.rb">
+    <entry file="file://$PROJECT_DIR$/app/admin/bookedroom.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="272">
+          <caret line="16" column="24" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
           <folding />
         </state>
       </provider>
