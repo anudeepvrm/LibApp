@@ -14,8 +14,13 @@ After 2 hours, the booked room will be deleted from active rooms and moved to Bo
 User can have only one active booking, the book link will be disabled until he/she cancels the room, slot expires or the admin deletes the room
 Admin can delete a room that is already booked by a user. It will be removed from active rooms section of the user and moved to booking history.
 
-New features in latest release: 
-Admin can book on behalf of a user (based on userId)
+New features in latest release:
+
+Admin can book on behalf of a user (based on userId) -> Under bookedrooms ->new bookedroom.
+
+Admin can view Booking History of a room under rooms-> view-> history html.
+
+Admin can view Booking History of a user under Users -> view -> history html (Remember booking a room does not mean it is in history. cancel a booking to test this functionality)
 
 
 The library booking service allows users to explore available rooms and book as per their convenience. The admins have a separate Login portal from where they can control the application system.
