@@ -2366,3 +2366,408 @@ Processing by MainController#index as HTML
 Completed 200 OK in 3102ms (Views: 3026.4ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2016-10-05 21:15:27 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MainController#index as HTML
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (30.0ms)
+Started GET "/" for ::1 at 2016-10-05 21:16:07 -0400
+Processing by MainController#index as HTML
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (1.0ms)
+Started GET "/" for ::1 at 2016-10-05 21:16:38 -0400
+Processing by MainController#index as HTML
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (1.0ms)
+Started GET "/" for ::1 at 2016-10-05 21:17:03 -0400
+Processing by MainController#index as HTML
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (1.0ms)
+Started GET "/" for ::1 at 2016-10-05 21:17:25 -0400
+Processing by MainController#index as HTML
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 153670ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Permission denied @ utime_failed - G:/OODD/Ruby/Project/LibApp/tmp/cache/assets/sprockets/v3.0/KE/KED_58DU8rbyWkH7t6l2_4iuphk-DnAGOCIOkbzJq-M.cache):
+    4:     <title>Libapp</title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9:   </head>
+   10: 
+  
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb__957646736_100616508'
+Started GET "/" for 127.0.0.1 at 2016-10-05 21:20:09 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MainController#index as HTML
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 4615ms (Views: 4594.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin_ui" for 127.0.0.1 at 2016-10-05 21:20:17 -0400
+Processing by AdminUi::DashboardController#index as HTML
+  [1m[36mAdminUser Load (1.0ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/bundler/gems/active_admin-f8926831429f/app/views/active_admin/page/index.html.arb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/bundler/gems/active_admin-f8926831429f/app/views/active_admin/page/index.html.arb (918.6ms)
+Completed 200 OK in 1039ms (Views: 1000.8ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/admin_ui/bookedrooms" for 127.0.0.1 at 2016-10-05 21:22:14 -0400
+Processing by AdminUi::BookedroomsController#index as HTML
+  [1m[36mAdminUser Load (1.0ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/bundler/gems/active_admin-f8926831429f/app/views/active_admin/resource/index.html.arb
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "bookedrooms" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "bookedrooms" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "bookedrooms"[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "bookedrooms" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mBookedroom Load (1.0ms)[0m  [1m[34mSELECT  "bookedrooms".* FROM "bookedrooms" ORDER BY "bookedrooms"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mRoom Load (1.0ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms"[0m
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/bundler/gems/active_admin-f8926831429f/app/views/active_admin/resource/index.html.arb (962.6ms)
+Completed 200 OK in 1419ms (Views: 1385.7ms | ActiveRecord: 9.0ms)
+
+
+Started GET "/admin_ui/rooms" for 127.0.0.1 at 2016-10-05 21:22:22 -0400
+Processing by AdminUi::RoomsController#index as HTML
+  [1m[36mAdminUser Load (0.0ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/bundler/gems/active_admin-f8926831429f/app/views/active_admin/resource/index.html.arb
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "rooms" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "rooms" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "rooms"[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "rooms" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mRoom Load (0.0ms)[0m  [1m[34mSELECT  "rooms".* FROM "rooms" ORDER BY "rooms"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mBookedroom Load (0.0ms)[0m  [1m[34mSELECT "bookedrooms".* FROM "bookedrooms"[0m
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/bundler/gems/active_admin-f8926831429f/app/views/active_admin/resource/index.html.arb (1085.1ms)
+Completed 200 OK in 1481ms (Views: 1474.5ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/admin_ui/rooms/new" for 127.0.0.1 at 2016-10-05 21:22:26 -0400
+Processing by AdminUi::RoomsController#new as HTML
+  [1m[36mAdminUser Load (0.0ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/bundler/gems/active_admin-f8926831429f/app/views/active_admin/resource/new.html.arb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/bundler/gems/active_admin-f8926831429f/app/views/active_admin/resource/new.html.arb (592.1ms)
+Completed 200 OK in 922ms (Views: 916.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin_ui/rooms" for 127.0.0.1 at 2016-10-05 21:22:36 -0400
+Processing by AdminUi::RoomsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KvPUtAA5zX5k4xwcS85eurDdgRIL1RNWQnB0PVYfEx258T8nDxPgkpcM6ykWvbalji3wUjzwfuMI53/PJw/USA==", "room"=>{"roomno"=>"543216", "building"=>"James.B.Hunt", "size"=>"4", "status"=>"Available"}, "commit"=>"Create Room"}
+  [1m[36mAdminUser Load (0.0ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRoom Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "rooms" WHERE "rooms"."roomno" = ? LIMIT ?[0m  [["roomno", 543216], ["LIMIT", 1]]
+  [1m[35mSQL (3.0ms)[0m  [1m[32mINSERT INTO "rooms" ("roomno", "building", "size", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["roomno", 543216], ["building", "James.B.Hunt"], ["size", 4], ["created_at", 2016-10-05 21:22:36 -0400], ["updated_at", 2016-10-05 21:22:36 -0400]]
+  [1m[35m (139.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/admin_ui/rooms/5
+Completed 302 Found in 1371ms (ActiveRecord: 143.5ms)
+
+
+Started GET "/admin_ui/rooms/5" for 127.0.0.1 at 2016-10-05 21:22:37 -0400
+Processing by AdminUi::RoomsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mAdminUser Load (0.5ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRoom Load (0.0ms)[0m  [1m[34mSELECT  "rooms".* FROM "rooms" WHERE "rooms"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/bundler/gems/active_admin-f8926831429f/app/views/active_admin/resource/show.html.arb
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = ? AND "active_admin_comments"."resource_id" = ? AND "active_admin_comments"."namespace" = ?[0m  [["resource_type", "Room"], ["resource_id", "5"], ["namespace", "admin_ui"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = ? AND "active_admin_comments"."resource_id" = ? AND "active_admin_comments"."namespace" = ?[0m  [["resource_type", "Room"], ["resource_id", "5"], ["namespace", "admin_ui"]]
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/bundler/gems/active_admin-f8926831429f/app/views/active_admin/resource/show.html.arb (609.6ms)
+Completed 200 OK in 944ms (Views: 932.5ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/admin_ui/rooms" for 127.0.0.1 at 2016-10-05 21:23:45 -0400
+Processing by AdminUi::RoomsController#index as HTML
+  [1m[36mAdminUser Load (0.0ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/bundler/gems/active_admin-f8926831429f/app/views/active_admin/resource/index.html.arb
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "rooms" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "rooms" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "rooms"[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "rooms" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mRoom Load (1.0ms)[0m  [1m[34mSELECT  "rooms".* FROM "rooms" ORDER BY "rooms"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mBookedroom Load (1.0ms)[0m  [1m[34mSELECT "bookedrooms".* FROM "bookedrooms"[0m
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/bundler/gems/active_admin-f8926831429f/app/views/active_admin/resource/index.html.arb (979.6ms)
+Completed 200 OK in 1425ms (Views: 1342.6ms | ActiveRecord: 13.5ms)
+
+
+Started GET "/admin_ui/rooms/new" for 127.0.0.1 at 2016-10-05 21:23:49 -0400
+Processing by AdminUi::RoomsController#new as HTML
+  [1m[36mAdminUser Load (0.0ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/bundler/gems/active_admin-f8926831429f/app/views/active_admin/resource/new.html.arb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/bundler/gems/active_admin-f8926831429f/app/views/active_admin/resource/new.html.arb (633.1ms)
+Completed 200 OK in 968ms (Views: 961.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin_ui/bookedrooms" for 127.0.0.1 at 2016-10-05 21:23:56 -0400
+Processing by AdminUi::BookedroomsController#index as HTML
+  [1m[36mAdminUser Load (0.0ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/bundler/gems/active_admin-f8926831429f/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "bookedrooms" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "bookedrooms" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "bookedrooms"[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "bookedrooms" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mBookedroom Load (10.0ms)[0m  [1m[34mSELECT  "bookedrooms".* FROM "bookedrooms" ORDER BY "bookedrooms"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mRoom Load (0.0ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms"[0m
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/bundler/gems/active_admin-f8926831429f/app/views/active_admin/resource/index.html.arb (1054.6ms)
+Completed 200 OK in 1368ms (Views: 1348.4ms | ActiveRecord: 14.5ms)
+
+
+Started GET "/admin_ui/bookedrooms/new" for 127.0.0.1 at 2016-10-05 21:24:05 -0400
+Processing by AdminUi::BookedroomsController#new as HTML
+  [1m[36mAdminUser Load (0.0ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/bundler/gems/active_admin-f8926831429f/app/views/active_admin/resource/new.html.arb
+  [1m[36mRoom Load (0.0ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms"[0m
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/bundler/gems/active_admin-f8926831429f/app/views/active_admin/resource/new.html.arb (614.1ms)
+Completed 200 OK in 965ms (Views: 959.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin_ui/rooms" for 127.0.0.1 at 2016-10-05 21:24:30 -0400
+Processing by AdminUi::RoomsController#index as HTML
+  [1m[36mAdminUser Load (0.0ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/bundler/gems/active_admin-f8926831429f/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "rooms" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "rooms" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "rooms"[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "rooms" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mRoom Load (1.0ms)[0m  [1m[34mSELECT  "rooms".* FROM "rooms" ORDER BY "rooms"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mBookedroom Load (1.0ms)[0m  [1m[34mSELECT "bookedrooms".* FROM "bookedrooms"[0m
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/bundler/gems/active_admin-f8926831429f/app/views/active_admin/resource/index.html.arb (865.6ms)
+Completed 200 OK in 1186ms (Views: 1178.9ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/admin_ui/rooms/new" for 127.0.0.1 at 2016-10-05 21:24:34 -0400
+Processing by AdminUi::RoomsController#new as HTML
+  [1m[36mAdminUser Load (0.0ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/bundler/gems/active_admin-f8926831429f/app/views/active_admin/resource/new.html.arb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/bundler/gems/active_admin-f8926831429f/app/views/active_admin/resource/new.html.arb (590.6ms)
+Completed 200 OK in 918ms (Views: 914.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin_ui/bookedrooms" for 127.0.0.1 at 2016-10-05 21:24:44 -0400
+Processing by AdminUi::BookedroomsController#index as HTML
+  [1m[36mAdminUser Load (1.0ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/bundler/gems/active_admin-f8926831429f/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "bookedrooms" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "bookedrooms" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "bookedrooms"[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "bookedrooms" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mBookedroom Load (1.0ms)[0m  [1m[34mSELECT  "bookedrooms".* FROM "bookedrooms" ORDER BY "bookedrooms"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mRoom Load (0.5ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms"[0m
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/bundler/gems/active_admin-f8926831429f/app/views/active_admin/resource/index.html.arb (878.9ms)
+Completed 200 OK in 1200ms (Views: 1194.6ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/admin_ui/bookedrooms/new" for 127.0.0.1 at 2016-10-05 21:24:48 -0400
+Processing by AdminUi::BookedroomsController#new as HTML
+  [1m[36mAdminUser Load (1.0ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/bundler/gems/active_admin-f8926831429f/app/views/active_admin/resource/new.html.arb
+  [1m[36mRoom Load (1.0ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms"[0m
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/bundler/gems/active_admin-f8926831429f/app/views/active_admin/resource/new.html.arb (610.1ms)
+Completed 200 OK in 920ms (Views: 911.8ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/admin_ui/users" for 127.0.0.1 at 2016-10-05 21:24:54 -0400
+Processing by AdminUi::UsersController#index as HTML
+  [1m[36mAdminUser Load (0.5ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/bundler/gems/active_admin-f8926831429f/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "users" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "users" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "users" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mBookedroom Load (0.0ms)[0m  [1m[34mSELECT "bookedrooms".* FROM "bookedrooms"[0m
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/bundler/gems/active_admin-f8926831429f/app/views/active_admin/resource/index.html.arb (913.3ms)
+Completed 200 OK in 1260ms (Views: 1251.2ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/admin_ui/users/new" for 127.0.0.1 at 2016-10-05 21:24:59 -0400
+Processing by AdminUi::UsersController#new as HTML
+  [1m[36mAdminUser Load (0.0ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/bundler/gems/active_admin-f8926831429f/app/views/active_admin/resource/new.html.arb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/bundler/gems/active_admin-f8926831429f/app/views/active_admin/resource/new.html.arb (632.6ms)
+Completed 200 OK in 938ms (Views: 932.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin_ui/users" for 127.0.0.1 at 2016-10-05 21:25:30 -0400
+Processing by AdminUi::UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wvkbzETk4l4bjII0xqEA1Ty0jcekm4TLgEiQ66cCyhtR+/BfS87PsuhjdQGb0ujKAkT8h5O+6X7K35sZ1hINTg==", "user"=>{"name"=>"Palak", "email"=>"palak@palak.com", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[36mAdminUser Load (1.0ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "palak@palak.com"], ["LIMIT", 1]]
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Palak"], ["email", "palak@palak.com"], ["password", "password"], ["created_at", 2016-10-05 21:25:30 -0400], ["updated_at", 2016-10-05 21:25:30 -0400]]
+  [1m[35m (152.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/admin_ui/users/2
+Completed 302 Found in 1328ms (ActiveRecord: 155.5ms)
+
+
+Started GET "/admin_ui/users/2" for 127.0.0.1 at 2016-10-05 21:25:31 -0400
+Processing by AdminUi::UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAdminUser Load (0.0ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/bundler/gems/active_admin-f8926831429f/app/views/active_admin/resource/show.html.arb
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = ? AND "active_admin_comments"."resource_id" = ? AND "active_admin_comments"."namespace" = ?[0m  [["resource_type", "User"], ["resource_id", "2"], ["namespace", "admin_ui"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = ? AND "active_admin_comments"."resource_id" = ? AND "active_admin_comments"."namespace" = ?[0m  [["resource_type", "User"], ["resource_id", "2"], ["namespace", "admin_ui"]]
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/bundler/gems/active_admin-f8926831429f/app/views/active_admin/resource/show.html.arb (646.1ms)
+Completed 200 OK in 963ms (Views: 957.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/admin_ui/bookedrooms" for 127.0.0.1 at 2016-10-05 21:25:35 -0400
+Processing by AdminUi::BookedroomsController#index as HTML
+  [1m[36mAdminUser Load (1.0ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/bundler/gems/active_admin-f8926831429f/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "bookedrooms" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "bookedrooms" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "bookedrooms"[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "bookedrooms" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mBookedroom Load (0.0ms)[0m  [1m[34mSELECT  "bookedrooms".* FROM "bookedrooms" ORDER BY "bookedrooms"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mRoom Load (0.0ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms"[0m
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/bundler/gems/active_admin-f8926831429f/app/views/active_admin/resource/index.html.arb (894.6ms)
+Completed 200 OK in 1208ms (Views: 1201.5ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/admin_ui/bookedrooms/new" for 127.0.0.1 at 2016-10-05 21:25:39 -0400
+Processing by AdminUi::BookedroomsController#new as HTML
+  [1m[36mAdminUser Load (1.0ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/bundler/gems/active_admin-f8926831429f/app/views/active_admin/resource/new.html.arb
+  [1m[36mRoom Load (0.0ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms"[0m
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/bundler/gems/active_admin-f8926831429f/app/views/active_admin/resource/new.html.arb (601.1ms)
+Completed 200 OK in 960ms (Views: 954.4ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/admin_ui/bookedrooms" for 127.0.0.1 at 2016-10-05 21:26:42 -0400
+Processing by AdminUi::BookedroomsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+7mvPqsx8LiAwg5fRo6+J28Qu0eBtC3bmIMttt1oCY5ou0StpBvdVHMt+Wob/VY4UeDKB7aRQG7SFCZErHjO2w==", "bookedroom"=>{"room_id"=>"543216", "user_id"=>"2", "status"=>"Booked", "booking_time(1i)"=>"2016", "booking_time(2i)"=>"6", "booking_time(3i)"=>"18", "booking_time(4i)"=>"17", "booking_time(5i)"=>"01"}, "commit"=>"Create Bookedroom"}
+  [1m[36mAdminUser Load (1.0ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "bookedrooms" ("user_id", "room_id", "booking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 2], ["room_id", 543216], ["booking_time", 2016-06-18 10:01:00 -0400], ["created_at", 2016-10-05 21:26:42 -0400], ["updated_at", 2016-10-05 21:26:42 -0400]]
+  [1m[35m (125.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/admin_ui/bookedrooms/5
+Completed 302 Found in 1296ms (ActiveRecord: 128.1ms)
+
+
+Started GET "/admin_ui/bookedrooms/5" for 127.0.0.1 at 2016-10-05 21:26:44 -0400
+Processing by AdminUi::BookedroomsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mAdminUser Load (0.0ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBookedroom Load (1.0ms)[0m  [1m[34mSELECT  "bookedrooms".* FROM "bookedrooms" WHERE "bookedrooms"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/bundler/gems/active_admin-f8926831429f/app/views/active_admin/resource/show.html.arb
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = ? AND "active_admin_comments"."resource_id" = ? AND "active_admin_comments"."namespace" = ?[0m  [["resource_type", "Bookedroom"], ["resource_id", "5"], ["namespace", "admin_ui"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = ? AND "active_admin_comments"."resource_id" = ? AND "active_admin_comments"."namespace" = ?[0m  [["resource_type", "Bookedroom"], ["resource_id", "5"], ["namespace", "admin_ui"]]
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/bundler/gems/active_admin-f8926831429f/app/views/active_admin/resource/show.html.arb (606.6ms)
+Completed 200 OK in 923ms (Views: 917.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/admin_ui/bookedrooms" for 127.0.0.1 at 2016-10-05 21:27:34 -0400
+Processing by AdminUi::BookedroomsController#index as HTML
+  [1m[36mAdminUser Load (1.0ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/bundler/gems/active_admin-f8926831429f/app/views/active_admin/resource/index.html.arb
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "bookedrooms" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "bookedrooms" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "bookedrooms"[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "bookedrooms" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mBookedroom Load (1.0ms)[0m  [1m[34mSELECT  "bookedrooms".* FROM "bookedrooms" ORDER BY "bookedrooms"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mRoom Load (1.0ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms"[0m
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/bundler/gems/active_admin-f8926831429f/app/views/active_admin/resource/index.html.arb (848.6ms)
+Completed 200 OK in 1166ms (Views: 1157.5ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/admin_ui/bookedrooms/new" for 127.0.0.1 at 2016-10-05 21:27:36 -0400
+Processing by AdminUi::BookedroomsController#new as HTML
+  [1m[36mAdminUser Load (1.0ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/bundler/gems/active_admin-f8926831429f/app/views/active_admin/resource/new.html.arb
+  [1m[36mRoom Load (0.0ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms"[0m
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/bundler/gems/active_admin-f8926831429f/app/views/active_admin/resource/new.html.arb (631.6ms)
+Completed 200 OK in 985ms (Views: 979.9ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/admin_ui/bookedrooms" for 127.0.0.1 at 2016-10-05 21:27:53 -0400
+Processing by AdminUi::BookedroomsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DeVrpWhr3GYMH7207OrbCP+uF330IWiNoWWQ7TDesOCe54A2Z0Hxiv/wSoGxmTMXwV5mPcMEBTjr8psfQc53tQ==", "bookedroom"=>{"room_id"=>"1231", "user_id"=>"1", "status"=>"Booked", "booking_time(1i)"=>"2018", "booking_time(2i)"=>"10", "booking_time(3i)"=>"21", "booking_time(4i)"=>"18", "booking_time(5i)"=>"00"}, "commit"=>"Create Bookedroom"}
+  [1m[36mAdminUser Load (0.0ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "bookedrooms" ("user_id", "room_id", "booking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 1], ["room_id", 1231], ["booking_time", 2018-10-21 11:00:00 -0400], ["created_at", 2016-10-05 21:27:53 -0400], ["updated_at", 2016-10-05 21:27:53 -0400]]
+  [1m[35m (119.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/admin_ui/bookedrooms/6
+Completed 302 Found in 1296ms (ActiveRecord: 120.4ms)
+
+
+Started GET "/admin_ui/bookedrooms/6" for 127.0.0.1 at 2016-10-05 21:27:55 -0400
+Processing by AdminUi::BookedroomsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mAdminUser Load (0.0ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBookedroom Load (0.0ms)[0m  [1m[34mSELECT  "bookedrooms".* FROM "bookedrooms" WHERE "bookedrooms"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/bundler/gems/active_admin-f8926831429f/app/views/active_admin/resource/show.html.arb
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = ? AND "active_admin_comments"."resource_id" = ? AND "active_admin_comments"."namespace" = ?[0m  [["resource_type", "Bookedroom"], ["resource_id", "6"], ["namespace", "admin_ui"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = ? AND "active_admin_comments"."resource_id" = ? AND "active_admin_comments"."namespace" = ?[0m  [["resource_type", "Bookedroom"], ["resource_id", "6"], ["namespace", "admin_ui"]]
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/bundler/gems/active_admin-f8926831429f/app/views/active_admin/resource/show.html.arb (617.1ms)
+Completed 200 OK in 945ms (Views: 941.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin_ui/bookedrooms" for 127.0.0.1 at 2016-10-05 21:28:20 -0400
+Processing by AdminUi::BookedroomsController#index as HTML
+  [1m[36mAdminUser Load (1.0ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/bundler/gems/active_admin-f8926831429f/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "bookedrooms" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "bookedrooms" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "bookedrooms"[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "bookedrooms" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mBookedroom Load (1.0ms)[0m  [1m[34mSELECT  "bookedrooms".* FROM "bookedrooms" ORDER BY "bookedrooms"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mRoom Load (1.0ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms"[0m
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/bundler/gems/active_admin-f8926831429f/app/views/active_admin/resource/index.html.arb (864.2ms)
+Completed 200 OK in 1255ms (Views: 1246.4ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/admin_ui/bookedrooms" for 127.0.0.1 at 2016-10-05 21:29:16 -0400
+Processing by AdminUi::BookedroomsController#index as HTML
+  [1m[36mAdminUser Load (0.0ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/bundler/gems/active_admin-f8926831429f/app/views/active_admin/resource/index.html.arb
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "bookedrooms" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "bookedrooms" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "bookedrooms"[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "bookedrooms" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mBookedroom Load (1.0ms)[0m  [1m[34mSELECT  "bookedrooms".* FROM "bookedrooms" ORDER BY "bookedrooms"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/bundler/gems/active_admin-f8926831429f/app/views/active_admin/resource/index.html.arb (969.6ms)
+Completed 500 Internal Server Error in 1408ms (ActiveRecord: 9.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for #<Bookedroom:0xc81b880>):
+    1: insert_tag renderer_for(:index)
+  
+app/admin/bookedroom.rb:17:in `block (3 levels) in <top (required)>'
+app/admin/bookedroom.rb:15:in `block (2 levels) in <top (required)>'
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (27.5ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (15.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (2428.8ms)
+Started GET "/admin_ui/bookedrooms" for 127.0.0.1 at 2016-10-05 21:30:09 -0400
+Processing by AdminUi::BookedroomsController#index as HTML
+  [1m[36mAdminUser Load (0.0ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/bundler/gems/active_admin-f8926831429f/app/views/active_admin/resource/index.html.arb
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "bookedrooms" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "bookedrooms" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "bookedrooms"[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "bookedrooms" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mBookedroom Load (1.0ms)[0m  [1m[34mSELECT  "bookedrooms".* FROM "bookedrooms" ORDER BY "bookedrooms"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mRoom Load (1.0ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms"[0m
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/bundler/gems/active_admin-f8926831429f/app/views/active_admin/resource/index.html.arb (1116.1ms)
+Completed 200 OK in 1546ms (Views: 1463.4ms | ActiveRecord: 13.0ms)
+
+
