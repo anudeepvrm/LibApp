@@ -22,6 +22,7 @@ Admin can view Booking History of a room under rooms-> view-> history html.
 
 Admin can view Booking History of a user under Users -> view -> history html (Remember booking a room does not mean it is in history. cancel a booking to test this functionality)
 
+---------------------------------------------------------------------------------------------------------------------------------
 
 The library booking service allows users to explore available rooms and book as per their convenience. The admins have a separate Login portal from where they can control the application system.
 
