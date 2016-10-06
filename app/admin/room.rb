@@ -15,6 +15,8 @@ ActiveAdmin.register Room do
       row :building
       row :status
       row :size
+      # row :history
+      row :history_html
     end
     active_admin_comments
   end

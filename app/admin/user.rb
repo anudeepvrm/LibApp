@@ -6,6 +6,7 @@ ActiveAdmin.register User do
       row :id
       row :name
       row :email
+      row :history_html
     end
     active_admin_comments
   end
