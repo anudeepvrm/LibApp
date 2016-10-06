@@ -1,6 +1,6 @@
 class Bookinghistory < ApplicationRecord
   def find_room
-  	return Room.where("roomno = " + self.room_id.to_s).first
+  	return Room.where("roomno = " + self.room_no.to_s).first
   end
 
   def find_user
