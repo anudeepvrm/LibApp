@@ -5,7 +5,7 @@ class User < ApplicationRecord
   validates :name, :presence => true
 
   def history
-  	return Bookedroom.where("user_id = " + self.id.to_s)
+  	return Bookinghistory.where("user_id = " + self.id.to_s)
   end
 
   def to_s

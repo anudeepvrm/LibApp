@@ -6,7 +6,7 @@ class Room < ApplicationRecord
   validates :roomno, :uniqueness => true
 
   def history
-  	return Bookedroom.where("room_id = " + self.roomno.to_s)
+  	return Bookinghistory.where("room_id = " + self.roomno.to_s)
   end
 
   def to_s
