@@ -1,6 +1,5 @@
 ActiveAdmin.register AdminUser do
 
-  actions :all, :except => [:destroy]
   permit_params :email, :password, :password_confirmation
 
 
