@@ -5,7 +5,7 @@ NOTE for Reviewers:
 
 DO NOT DELETE SUPER ADMIN. ADMIN CAN DELETE HIMSELF
 
-Current Booked rooms and Booking history are two different entities. Active rooms won't appear in booking history. The room will go to booking history only after the time expires, user cancels it or the admin deletes that room.
+Current Booked rooms and Booking history are two different entities. Active Booked rooms won't appear in booking history. The room will go to booking history only after the time expires, user cancels it or the admin deletes that room.
 Admin can delete a room booked by a user (Special case). In that case, the User will no longer have the room under his active rooms but instead it will be cancelled and moved to his history.
 A user can book a 2 hour slot but he can't book at any arbitrary time. For example, a user can book a slot at 1am-3am or 2am-4am. He is not allowed to book a room from 2:13am-4:13am. 
 User can't book expired slots. For example, if the current time is 4:45am, the user can't book a room slot at 4:00 am. He/She is only allowed to book 5am slot.
